@@ -165,7 +165,7 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // forgotPassword
+            // ResetPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -184,7 +184,7 @@
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.txtNewPassword);
             this.Controls.Add(this.txtEmail);
-            this.Name = "forgotPassword";
+            this.Name = "ResetPage";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.ResetPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
