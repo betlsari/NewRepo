@@ -25,7 +25,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterPage));
             this.Register = new System.Windows.Forms.Button();
             this.name1 = new System.Windows.Forms.Label();
             this.surname1 = new System.Windows.Forms.Label();

@@ -73,7 +73,7 @@ namespace Console.Betül
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(); //Create an instance of Form2
+            RegisterPage form2 = new RegisterPage(); //Create an instance of Form2
 
             form2.Show(); //Show Form2 modally
 
@@ -83,7 +83,7 @@ namespace Console.Betül
 
         private void button4_Click(object sender, EventArgs e)
         {
-            forgotPassword form3 = new forgotPassword();
+            ResetPage form3 = new ResetPage();
             form3.Show();
 
 

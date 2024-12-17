@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Console.Betül;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Console
 {
     public partial class UserManagement : Form
     {
+        private string userName0;
         public UserManagement()
         {
             InitializeComponent();
