@@ -1,8 +1,7 @@
-﻿namespace ArabaForum
+﻿namespace Console
 {
-    partial class MainForm
-    {
-        /// <summary>
+    partial class Forum
+    {   /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
@@ -137,7 +136,6 @@
             this.Controls.Add(this.btnAddPosts);
             this.Name = "MainForm";
             this.Text = "Forum";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,4 +153,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }
+}
 }
