@@ -7,34 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Xml.Linq;
 
-namespace WindowsFormsApp1
+namespace Console.Betül
 {
-    
-    public partial class Form1 : Form
+    public partial class Register : Form
     {
-       
-        public Form1()
+        public Register()
         {
             InitializeComponent();
             textBox3.PasswordChar = '*';
-
         }
 
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
             if (textBox3.Text == "" || textBox1.Text == "")
             {
                 MessageBox.Show("Please Do Not Leave Empty Values.", "Incorrect Operation!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }
-            if(textBox3.Text !="" &&  textBox1.Text != "")
+            if (textBox3.Text != "" && textBox1.Text != "")
             {
-                if(textBox1.Text==Properties.Settings.Default.username && textBox3.Text==Properties.Settings.Default.password)
+                if (textBox1.Text == Properties.Settings.Default.username && textBox3.Text == Properties.Settings.Default.password)
                 {
                     MessageBox.Show("Welcome!");
                     string userName = textBox1.Text;
@@ -50,21 +49,22 @@ namespace WindowsFormsApp1
                 }
             }
 
-            
+
 
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked) {
+            if (checkBox1.Checked)
+            {
                 textBox3.PasswordChar = '\0';
-                    }
+            }
             else
             {
                 textBox3.PasswordChar = '*';
@@ -79,18 +79,13 @@ namespace WindowsFormsApp1
 
         }
 
-        
+
 
         private void button4_Click(object sender, EventArgs e)
         {
-           forgotPassword form3 = new forgotPassword();
+            forgotPassword form3 = new forgotPassword();
             form3.Show();
-            
 
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
         }
     }

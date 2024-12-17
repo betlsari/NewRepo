@@ -70,6 +70,24 @@
       <DependentUpon>AddCarForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Betül\control.cs" />
+    <Compile Include="Betül\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Betül\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Betül\ResetPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Betül\ResetPage.Designer.cs">
+      <DependentUpon>ResetPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Betül\SaticiIletisim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Betül\SaticiIletisim.Designer.cs">
+      <DependentUpon>SaticiIletisim.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +129,15 @@
     </Compile>
     <EmbeddedResource Include="AddCarForm.resx">
       <DependentUpon>AddCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Betül\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Betül\ResetPage.resx">
+      <DependentUpon>ResetPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Betül\SaticiIletisim.resx">
+      <DependentUpon>SaticiIletisim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
