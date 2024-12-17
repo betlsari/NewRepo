@@ -88,5 +88,10 @@ namespace Console.Betül
 
 
         }
+
+        private void Register_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

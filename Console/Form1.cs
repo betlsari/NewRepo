@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
+using Console.Betül;
 using DataAccessLayer;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
@@ -260,5 +261,12 @@ namespace Console
             ListCars(txtName.Text, minPrice, maxPrice);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var Register = new Register();
+            Register.Show();
+            
+            this.Hide();
+        }
     }
 }

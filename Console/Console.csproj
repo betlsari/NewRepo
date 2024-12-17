@@ -69,7 +69,19 @@
     <Compile Include="AddCarForm.Designer.cs">
       <DependentUpon>AddCarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Betül\AudiA4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Betül\AudiA4.Designer.cs">
+      <DependentUpon>AudiA4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Betül\control.cs" />
+    <Compile Include="Betül\FordFocus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Betül\FordFocus.Designer.cs">
+      <DependentUpon>FordFocus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Betül\Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,12 @@
     </Compile>
     <EmbeddedResource Include="AddCarForm.resx">
       <DependentUpon>AddCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Betül\AudiA4.resx">
+      <DependentUpon>AudiA4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Betül\FordFocus.resx">
+      <DependentUpon>FordFocus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Betül\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>

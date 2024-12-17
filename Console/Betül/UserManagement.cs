@@ -76,18 +76,8 @@ namespace Console
                     FordFocus fordFocusForm = new FordFocus();
                     fordFocusForm.Show();
                 }
-                else if (selectedAd == "2018 Model BMW 3 Serisi")
-                {
-                    // BMW 3 Serisi ilanına ait formu aç
-                    Bmw3 bmwForm = new Bmw3();
-                    bmwForm.Show();
-                }
-                else if (selectedAd == "2021 Model Tesla Model 3")
-                {
-                    // Tesla Model 3 ilanına ait formu aç
-                    TeslaModel3 teslaForm = new TeslaModel3();
-                    teslaForm.Show();
-                }
+                
+                
                 else if (selectedAd == "2019 Model Audi A4")
                 {
                     // Audi A4 ilanına ait formu aç
@@ -115,18 +105,7 @@ namespace Console
                     FordFocus fordFocusForm = new FordFocus();
                     fordFocusForm.Show();
                 }
-                else if (selectedAd == "2018 Model BMW 3 Serisi")
-                {
-                    // BMW 3 Serisi ilanına ait formu aç
-                    Bmw3 bmwForm = new Bmw3();
-                    bmwForm.Show();
-                }
-                else if (selectedAd == "2021 Model Tesla Model 3")
-                {
-                    // Tesla Model 3 ilanına ait formu aç
-                    TeslaModel3 teslaForm = new TeslaModel3();
-                    teslaForm.Show();
-                }
+                
                 else if (selectedAd == "2019 Model Audi A4")
                 {
                     // Audi A4 ilanına ait formu aç

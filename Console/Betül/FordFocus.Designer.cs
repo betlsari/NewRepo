@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace Console.Betül
 {
     partial class FordFocus
     {
@@ -162,7 +162,6 @@
             this.Controls.Add(this.label11);
             this.Name = "FordFocus";
             this.Text = "FordFocus";
-            this.Load += new System.EventHandler(this.FordFocus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
