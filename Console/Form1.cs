@@ -131,16 +131,14 @@ namespace Console
 
         private void ListOfCars()
         {
-            
             using (AppDbContext context = new AppDbContext())
             {
-                // Benzersiz araç modellerini alıyoruz
+                // Benzersiz araç modellerini alıyoruz ve ComboBox'a dolduruyoruz
                 var carModels = context.Cars
                     .Select(c => c.Model)
                     .Distinct()
                     .ToList();
 
-                // ComboBox'ı model listesi ile dolduruyoruz
                 cbxCar.DataSource = carModels;
             }
 
@@ -148,8 +146,22 @@ namespace Console
             CarManager _carManager = new CarManager(new CarDal());
             dgwFilter.DataSource = _carManager.GetAvailableCars();
 
+            // isAvailable sütununu gizle
             dgwFilter.Columns["isAvailable"].Visible = false;
+
+            // Favori butonunu DataGridView'e ekle (sadece bir kere eklenmesini sağlıyoruz)
+            if (!dgwFilter.Columns.Contains("FavoriteButton"))
+            {
+                DataGridViewButtonColumn favoriteButton = new DataGridViewButtonColumn();
+                favoriteButton.Name = "FavoriteButton";
+                favoriteButton.HeaderText = "Favoriye Ekle";
+                favoriteButton.Text = "Favori";
+                favoriteButton.UseColumnTextForButtonValue = true;
+
+                dgwFilter.Columns.Add(favoriteButton);
+            }
         }
+
 
 
         // FİLTRELER 
@@ -255,8 +267,49 @@ namespace Console
         {
             var Register = new Register();
             Register.Show();
-            
+
             this.Hide();
+        }
+
+        private void dgwFilter_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgwFilter.Columns[e.ColumnIndex].Name == "FavoriteButton" && e.RowIndex >= 0)
+            {
+                // Seçili aracın ID'sini alalım
+                int carId = Convert.ToInt32(dgwFilter.Rows[e.RowIndex].Cells["Id"].Value);
+
+                using (AppDbContext context = new AppDbContext())
+                {
+                    // Seçili aracı bul
+                    var selectedCar = context.Cars.FirstOrDefault(c => c.CarId == carId);
+
+                    if (selectedCar != null)
+                    {
+                        // Eğer araç zaten favori ise uyarı ver
+                        if (selectedCar.isFavorite)
+                        {
+                            MessageBox.Show("Bu araç zaten favorilere eklenmiş!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            // Aracı favorilere ekle
+                            selectedCar.isFavorite = true;
+                            context.SaveChanges();
+
+                            MessageBox.Show("Araç favorilere eklendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+
+                // Listeyi güncelle
+                ListOfCars();
+            }
+        }
+
+        private void btnShowFavorites_Click(object sender, EventArgs e)
+        {
+            var favoritesForm = new FavoritesForm();
+            favoritesForm.Show();
         }
     }
 }

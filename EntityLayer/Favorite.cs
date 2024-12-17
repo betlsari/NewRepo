@@ -21,6 +21,7 @@ namespace EntityLayer
 
         public int FavoriteId { get; set; }
         public int CarId { get; set; }   // Araba Id'si
-        public int UserId { get; set; }  // Kullanıcı Id'si (isteğe bağlı)
+        public int UserId { get; set; }  // Kullanıcı Id'si (isteğe bağlı) 
+       
     }
 }

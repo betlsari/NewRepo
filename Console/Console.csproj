@@ -100,6 +100,12 @@
     <Compile Include="Betül\SaticiIletisim.Designer.cs">
       <DependentUpon>SaticiIletisim.cs</DependentUpon>
     </Compile>
+    <Compile Include="FavoritesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FavoritesForm.Designer.cs">
+      <DependentUpon>FavoritesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Betül\SaticiIletisim.resx">
       <DependentUpon>SaticiIletisim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavoritesForm.resx">
+      <DependentUpon>FavoritesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

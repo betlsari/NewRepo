@@ -48,6 +48,7 @@
             this.goToRentalFormBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnShowFavorites = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFilter)).BeginInit();
             this.gbxModel.SuspendLayout();
             this.gbxPrice.SuspendLayout();
@@ -63,8 +64,9 @@
             this.dgwFilter.Name = "dgwFilter";
             this.dgwFilter.RowHeadersWidth = 51;
             this.dgwFilter.RowTemplate.Height = 24;
-            this.dgwFilter.Size = new System.Drawing.Size(522, 227);
+            this.dgwFilter.Size = new System.Drawing.Size(578, 227);
             this.dgwFilter.TabIndex = 0;
+            this.dgwFilter.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwFilter_CellContentClick);
             // 
             // gbxModel
             // 
@@ -234,11 +236,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnShowFavorites
+            // 
+            this.btnShowFavorites.Location = new System.Drawing.Point(230, 251);
+            this.btnShowFavorites.Name = "btnShowFavorites";
+            this.btnShowFavorites.Size = new System.Drawing.Size(75, 23);
+            this.btnShowFavorites.TabIndex = 14;
+            this.btnShowFavorites.Text = "button2";
+            this.btnShowFavorites.UseVisualStyleBackColor = true;
+            this.btnShowFavorites.Click += new System.EventHandler(this.btnShowFavorites_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1327, 538);
+            this.Controls.Add(this.btnShowFavorites);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.goToRentalFormBtn);
@@ -284,6 +297,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnShowFavorites;
     }
 }
 
