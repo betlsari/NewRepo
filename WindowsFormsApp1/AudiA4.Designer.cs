@@ -162,6 +162,7 @@
             this.Controls.Add(this.label11);
             this.Name = "AudiA4";
             this.Text = "AudiA4";
+            this.Load += new System.EventHandler(this.AudiA4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

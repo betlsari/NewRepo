@@ -14,7 +14,10 @@ namespace Console
     {
         public RegisterPage()
         {
+            
+
             InitializeComponent();
+            password0.PasswordChar = '*';
         }
 
         private void RegisterPage_Load(object sender, EventArgs e)
@@ -69,5 +72,7 @@ namespace Console
 
 
         }
+
+
     }
 }
