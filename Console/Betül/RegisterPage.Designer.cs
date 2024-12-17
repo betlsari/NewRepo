@@ -1,10 +1,7 @@
-﻿namespace WindowsFormsApp1
+﻿namespace Console
 {
-    partial class Form2
+    partial class RegisterPage
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
@@ -185,7 +182,6 @@
             this.Controls.Add(this.Register);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

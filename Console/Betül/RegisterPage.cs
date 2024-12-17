@@ -5,19 +5,20 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace Console
 {
-    public partial class Form2 : Form
+    public partial class RegisterPage : Form
     {
-        public Form2()
+        public RegisterPage()
         {
             InitializeComponent();
-            password0.PasswordChar = '*';
-            
+        }
+
+        private void RegisterPage_Load(object sender, EventArgs e)
+        {
 
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -31,7 +32,7 @@ namespace WindowsFormsApp1
                 password0.PasswordChar = '*';
             }
         }
-       
+
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
@@ -66,11 +67,6 @@ namespace WindowsFormsApp1
             string savedUsername = Properties.Settings.Default.username;
             string savedPassword = Properties.Settings.Default.password;
 
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
 
         }
     }

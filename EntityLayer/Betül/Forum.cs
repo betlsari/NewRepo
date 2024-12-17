@@ -1,22 +1,29 @@
 ﻿using System;
-using System.IO;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
-namespace ArabaForum
+namespace Console
 {
-    public partial class MainForm : Form
+    public partial class Forum : Form
     {
         private string postsFile = "posts.txt";       // Gönderiler için dosya
         private string commentsFile = "comments.txt"; // Yorumlar için dosya
-
-        public MainForm()
+        public Forum()
         {
             InitializeComponent();
-            LoadPosts(); // Uygulama açıldığında gönderileri yükle
+            LoadPosts();
         }
 
-        // Gönderileri dosyadan yükle ve listeye ekle
+        private void Forum_Load(object sender, EventArgs e)
+        {
+
+        }
         private void LoadPosts()
         {
             lstPosts.Items.Clear();
@@ -62,10 +69,10 @@ namespace ArabaForum
 
 
 
-        
-        
+
+
         // Yorum ekle butonuna tıklandığında çalışır
-        
+
 
         private void btnAddComment_Click(object sender, EventArgs e)
         {
@@ -113,9 +120,5 @@ namespace ArabaForum
             }
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
