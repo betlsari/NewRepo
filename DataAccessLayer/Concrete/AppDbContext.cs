@@ -19,6 +19,8 @@ namespace DataAccessLayer
         public DbSet<Listing> Listings { get; set; }
         public DbSet<Rental> Rentals { get; set; }
         public DbSet<Car> Cars { get; set; }
+        public DbSet<Favorite> Favorites { get; set; }
+
 
     }
 }

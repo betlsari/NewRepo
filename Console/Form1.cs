@@ -131,18 +131,7 @@ namespace Console
 
         private void ListOfCars()
         {
-            /*  using (AppDbContext context = new AppDbContext())
-              {
-                  //cbxModel.DataSource = context.Cars.ToList();
-
-                  CarManager _carManagger = new CarManager(new CarDal());
-                  dgwFilter.DataSource = _carManagger.GetAvailableCars();
-
-                  dgwFilter.Columns["isAvailable"].Visible = false;
-
-
-              }*/
-
+            
             using (AppDbContext context = new AppDbContext())
             {
                 // Benzersiz araç modellerini alıyoruz

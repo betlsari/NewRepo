@@ -136,6 +136,10 @@
     <Compile Include="Migrations\202412151142521_Migratioon2.Designer.cs">
       <DependentUpon>202412151142521_Migratioon2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202412171342597_AddFavoriteTable.cs" />
+    <Compile Include="Migrations\202412171342597_AddFavoriteTable.Designer.cs">
+      <DependentUpon>202412171342597_AddFavoriteTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -155,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202412151142521_Migratioon2.resx">
       <DependentUpon>202412151142521_Migratioon2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412171342597_AddFavoriteTable.resx">
+      <DependentUpon>202412171342597_AddFavoriteTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
