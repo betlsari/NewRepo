@@ -60,7 +60,7 @@
             this.dgwFilter.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgwFilter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFilter.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dgwFilter.Location = new System.Drawing.Point(401, 209);
+            this.dgwFilter.Location = new System.Drawing.Point(353, 209);
             this.dgwFilter.Name = "dgwFilter";
             this.dgwFilter.RowHeadersWidth = 51;
             this.dgwFilter.RowTemplate.Height = 24;
@@ -228,7 +228,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(975, 252);
+            this.button1.Location = new System.Drawing.Point(925, 236);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 13;

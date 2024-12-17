@@ -82,5 +82,17 @@ namespace Console.Properties {
                 this["surname"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string savedUserName {
+            get {
+                return ((string)(this["savedUserName"]));
+            }
+            set {
+                this["savedUserName"] = value;
+            }
+        }
     }
 }

@@ -169,7 +169,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UserManagement";
             this.Text = "UserManagement";
-            this.Load += new System.EventHandler(this.KullaniciYonetimi_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
