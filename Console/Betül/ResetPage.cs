@@ -7,21 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace WindowsFormsApp1
+namespace Console.Betül
 {
-    public partial class forgotPassword : Form
+    public partial class ResetPage : Form
     {
-        public forgotPassword()
+        public ResetPage()
         {
             InitializeComponent();
             txtNewPassword.PasswordChar = '*';
             txtConfirmPassword.PasswordChar = '*';
-           
         }
-        
-        
+
+        private void ResetPage_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -120,11 +121,5 @@ namespace WindowsFormsApp1
 
             }
         }
-
-        private void forgotPassword_Load(object sender, EventArgs e)
-        {
-
-        }
     }
-    
 }

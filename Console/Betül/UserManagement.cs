@@ -16,10 +16,11 @@ namespace Console
         {
             InitializeComponent();
         }
-
-        private void UserManagement_Load(object sender, EventArgs e)
+        private void KullaniciYonetimi_Load(object sender, EventArgs e)
         {
-              private string userName0;
+
+        }
+
         public UserManagement(string userName)
         {
             InitializeComponent();
@@ -44,10 +45,7 @@ namespace Console
         }
 
 
-        private void KullaniciYonetimi_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -140,4 +138,5 @@ namespace Console
             }
         }
     }
-    }
+}
+    

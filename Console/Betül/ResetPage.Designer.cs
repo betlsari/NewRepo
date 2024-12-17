@@ -1,10 +1,7 @@
-﻿namespace WindowsFormsApp1
+﻿namespace Console.Betül
 {
-    partial class forgotPassword
+    partial class ResetPage
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
@@ -189,7 +186,7 @@
             this.Controls.Add(this.txtEmail);
             this.Name = "forgotPassword";
             this.Text = "Form3";
-            this.Load += new System.EventHandler(this.forgotPassword_Load);
+            this.Load += new System.EventHandler(this.ResetPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -211,5 +208,9 @@
         private System.Windows.Forms.Label username5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+
+    }
+
+        #endregion
     }
 }

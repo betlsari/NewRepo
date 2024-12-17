@@ -8,23 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace Console.Betül
 {
-    public partial class SaticiIletisim : Form
+    public partial class AudiA4 : Form
     {
-        public SaticiIletisim()
+        public AudiA4()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Kullanıcının yazdığı mesajı al ve göster
-            string mesaj = txtMesaj.Text;
-            MessageBox.Show($"Mesaj Gönderildi: {mesaj}", "Bilgi");
+            SaticiIletisim st = new SaticiIletisim();
+            st.ShowDialog();
+            this.Hide();
+
         }
 
-        private void SaticiIletisim_Load(object sender, EventArgs e)
+        private void AudiA4_Load(object sender, EventArgs e)
         {
 
         }

@@ -16,5 +16,16 @@ namespace Console.Betül
         {
             InitializeComponent();
         }
+
+        private void SaticiIletisim_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Kullanıcının yazdığı mesajı al ve göster
+            string mesaj = txtMesaj.Text;
+            MessageBox.Show($"Mesaj Gönderildi: {mesaj}", "Bilgi");
+        }
     }
 }
