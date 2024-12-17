@@ -269,5 +269,7 @@ namespace Console
             
             this.Hide();
         }
+
+      
     }
 }

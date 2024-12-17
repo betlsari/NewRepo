@@ -77,21 +77,21 @@
             this.lstComments.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.lstComments.FormattingEnabled = true;
             this.lstComments.ItemHeight = 16;
-            this.lstComments.Location = new System.Drawing.Point(493, 112);
+            this.lstComments.Location = new System.Drawing.Point(531, 115);
             this.lstComments.Name = "lstComments";
             this.lstComments.Size = new System.Drawing.Size(257, 212);
             this.lstComments.TabIndex = 4;
             // 
             // txtComment
             // 
-            this.txtComment.Location = new System.Drawing.Point(553, 333);
+            this.txtComment.Location = new System.Drawing.Point(589, 336);
             this.txtComment.Name = "txtComment";
             this.txtComment.Size = new System.Drawing.Size(174, 22);
             this.txtComment.TabIndex = 5;
             // 
             // btnAddComment
             // 
-            this.btnAddComment.Location = new System.Drawing.Point(553, 387);
+            this.btnAddComment.Location = new System.Drawing.Point(589, 374);
             this.btnAddComment.Name = "btnAddComment";
             this.btnAddComment.Size = new System.Drawing.Size(174, 23);
             this.btnAddComment.TabIndex = 6;
@@ -119,7 +119,7 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "FORUM";
             // 
-            // MainForm
+            // Forum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,8 +134,9 @@
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.lstPosts);
             this.Controls.Add(this.btnAddPosts);
-            this.Name = "MainForm";
+            this.Name = "Forum";
             this.Text = "Forum";
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

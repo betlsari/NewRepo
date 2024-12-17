@@ -13,111 +13,99 @@ namespace Console
 {
     public partial class UserManagement : Form
     {
-        private string userName0;
+        private string userName0; // Variable to store the user's name
+
+        // Default constructor for the UserManagement form
         public UserManagement()
         {
             InitializeComponent();
         }
-        private void KullaniciYonetimi_Load(object sender, EventArgs e)
-        {
 
-        }
-
+        // Constructor that takes a user name as an argument
         public UserManagement(string userName)
         {
             InitializeComponent();
 
-            userName0 = userName;
+            userName0 = userName; // Store the user name
 
+            // Set the user name on the form (e.g., a label or textbox)
+            this.userName.Text = userName;
 
-            // Kullanıcı bilgileri
-            this.userName.Text = userName; // Örnek kullanıcı adı
-
-            // Favori ilanlar
-            MessageBox.Show("Lütfen bir ilan başlığı seçin.");
+            // Add some sample favorite listings to the combo boxes
+            MessageBox.Show("Lütfen bir ilan başlığı seçin."); // Show a message prompting the user to select a listing title
             comboBoxAd.Items.Add("2020 Model Ford Focus");
-            comboBoxAd.Items.Add("2018 Model BMW 3 Serisi");
-            comboBoxAd.Items.Add("2021 Model Tesla Model 3");
             comboBoxAd.Items.Add("2019 Model Audi A4");
             comboBoxAd2.Items.Add("2020 Model Ford Focus");
-            comboBoxAd2.Items.Add("2018 Model BMW 3 Serisi");
-            comboBoxAd2.Items.Add("2021 Model Tesla Model 3");
             comboBoxAd2.Items.Add("2019 Model Audi A4");
-
         }
 
-
-
-
+        // Event handler for the first button click (to go to the Seller Communication form)
         private void button1_Click(object sender, EventArgs e)
         {
-            // Satıcı İletişimi formuna geçiş
+            // Open the "Seller Communication" form
             SaticiIletisim saticiIletisimFormu = new SaticiIletisim();
             saticiIletisimFormu.Show();
-            // Form1'e kullanıcı adı gönderilir
 
-
-
-            // Bu form kapatılır
+            // Hide the current form (User Management form)
             this.Hide();
         }
 
+        // Event handler for the second button click (to select a listing and view its details)
         private void button2_Click(object sender, EventArgs e)
         {
-            string selectedAd = comboBoxAd.SelectedItem?.ToString();
+            string selectedAd = comboBoxAd.SelectedItem?.ToString(); // Get the selected item in comboBoxAd
 
-            // Eğer bir ilan başlığı seçilmişse
+            // If a listing title is selected
             if (!string.IsNullOrEmpty(selectedAd))
             {
-                // Seçilen ilana göre ilgili formu aç
+                // Open the relevant form based on the selected listing
                 if (selectedAd == "2020 Model Ford Focus")
                 {
-                    // Ford Focus ilanına ait formu aç
+                    // Open the form for the Ford Focus listing
                     FordFocus fordFocusForm = new FordFocus();
                     fordFocusForm.Show();
                 }
-                
-                
                 else if (selectedAd == "2019 Model Audi A4")
                 {
-                    // Audi A4 ilanına ait formu aç
+                    // Open the form for the Audi A4 listing
                     AudiA4 audiForm = new AudiA4();
                     audiForm.Show();
                 }
             }
             else
             {
+                // If no listing title is selected, show a message asking the user to select one
                 MessageBox.Show("Lütfen bir ilan başlığı seçin.");
             }
         }
 
+        // Event handler for the third button click (to select another listing and view its details)
         private void button1_Click_1(object sender, EventArgs e)
         {
-            string selectedAd = comboBoxAd2.SelectedItem?.ToString();
+            string selectedAd = comboBoxAd2.SelectedItem?.ToString(); // Get the selected item in comboBoxAd2
 
-            // Eğer bir ilan başlığı seçilmişse
+            // If a listing title is selected
             if (!string.IsNullOrEmpty(selectedAd))
             {
-                // Seçilen ilana göre ilgili formu aç
+                // Open the relevant form based on the selected listing
                 if (selectedAd == "2020 Model Ford Focus")
                 {
-                    // Ford Focus ilanına ait formu aç
+                    // Open the form for the Ford Focus listing
                     FordFocus fordFocusForm = new FordFocus();
                     fordFocusForm.Show();
                 }
-                
                 else if (selectedAd == "2019 Model Audi A4")
                 {
-                    // Audi A4 ilanına ait formu aç
+                    // Open the form for the Audi A4 listing
                     AudiA4 audiForm = new AudiA4();
                     audiForm.Show();
                 }
             }
             else
             {
+                // If no listing title is selected, show a message asking the user to select one
                 MessageBox.Show("Lütfen bir ilan başlığı seçin.");
             }
         }
     }
 }
-    
