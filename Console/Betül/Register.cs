@@ -18,10 +18,18 @@ namespace Console.Betül
             textBox3.PasswordChar = '*';
         }
 
-        private void Register_Load(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox1.Checked)
+            {
+                textBox3.PasswordChar = '\0';
+            }
+            else
+            {
+                textBox3.PasswordChar = '*';
+            }
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -59,18 +67,7 @@ namespace Console.Betül
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked)
-            {
-                textBox3.PasswordChar = '\0';
-            }
-            else
-            {
-                textBox3.PasswordChar = '*';
-            }
-        }
-
+       
         private void button1_Click_1(object sender, EventArgs e)
         {
             RegisterPage form2 = new RegisterPage(); //Create an instance of Form2
@@ -86,6 +83,11 @@ namespace Console.Betül
             ResetPage form3 = new ResetPage();
             form3.Show();
 
+
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
 
         }
 
