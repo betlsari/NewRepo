@@ -24,5 +24,10 @@ namespace WindowsFormsApp1
             this.Hide();
 
         }
+
+        private void AudiA4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
