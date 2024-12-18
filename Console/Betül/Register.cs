@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Console.Samet;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -81,6 +82,13 @@ namespace Console.Betül
         private void Register_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var mainMenu = new MainMenü();
+            mainMenu.Show();
+            this.Hide();
         }
     }
 }

@@ -44,7 +44,9 @@ namespace Console
 
         // This method is triggered when the "Back to Rental Form" button is clicked
         // It opens the RentalForm and hides the current form
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             var RentalForm = new RentalForm(); // Create a new instance of the RentalForm
             RentalForm.Show(); // Show the RentalForm

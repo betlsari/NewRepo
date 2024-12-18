@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Console.Samet;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -116,6 +117,13 @@ namespace Console
             {
                 MessageBox.Show("Başlık Ve İçerik Boş Olamaz!"); // Show an error message if title or content is empty
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var mainMenu = new MainMenü();
+            mainMenu.Show();
+            this.Hide();
         }
     }
 }

@@ -43,5 +43,12 @@ namespace Console.Samet
             form1.Show();
             this.Hide();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var mainMenu = new MainMenü();
+            mainMenu.Show();
+            this.Hide();
+        }
     }
 }

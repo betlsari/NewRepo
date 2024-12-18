@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
 using Console.Betül;
+using Console.Samet;
 using DataAccessLayer;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
@@ -96,7 +97,6 @@ namespace Console
                                           StartDate = rental.StartDate,
                                           EndDate = rental.EndDate
                                       };
-                // Uncomment and use it when needed
                 // dgwRentals.DataSource = rentalsWithCars.ToList(); 
             }
         }
@@ -227,6 +227,14 @@ namespace Console
             var Register = new Register(); // Create a new instance of Register form
             Register.Show(); // Show the Register form
             this.Hide(); // Hide the current form
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var mainMenu = new MainMenü();
+
+            mainMenu.Show();
+            this.Hide();
         }
     }
 }

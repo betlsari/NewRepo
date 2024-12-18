@@ -156,20 +156,22 @@ namespace Console
         }
 
         // This method is triggered when the 'Ilan' button is clicked
-        // It opens the 'Ilan' form
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var Form1 = new Ilan();
-            Form1.Show();
-            this.Hide(); // Hide the current form
-        }
-
+  
         // This method is triggered when the 'Rentaled Cars' button is clicked
         // It opens the form to show rented cars
         private void goToRentaledForm_Click(object sender, EventArgs e)
         {
+
             var RentaledCarsForm = new RentaledCarsForm();
             RentaledCarsForm.Show();
+            this.Hide(); // Hide the current form
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            var Form1 = new Ilan();
+            Form1.Show();
             this.Hide(); // Hide the current form
         }
     }

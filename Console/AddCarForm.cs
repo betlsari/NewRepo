@@ -117,7 +117,9 @@ namespace Console
         }
 
         // Event handler for navigating back to the previous form (Ilan form)
-        private void button1_Click(object sender, EventArgs e)
+       
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             var Form1 = new Ilan();
             Form1.Show(); // Show the Ilan form
