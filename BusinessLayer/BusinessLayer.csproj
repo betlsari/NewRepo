@@ -43,10 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\ICarManager.cs" />
-    <Compile Include="Abstract\IListingManager.cs" />
     <Compile Include="Abstract\IRentalManager.cs" />
     <Compile Include="Concrete\CarManager.cs" />
-    <Compile Include="Concrete\ListingManager.cs" />
     <Compile Include="Concrete\RentalManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

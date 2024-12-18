@@ -61,9 +61,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(287, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 31);
+            this.label1.Size = new System.Drawing.Size(197, 31);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Kiralanan Araçlar";
+            this.label1.Text = "Rented Vehicles";
             // 
             // RentaledCarsForm
             // 

@@ -10,84 +10,85 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class CarManager:ICarManager
+    // The CarManager class implements ICarManager and provides the business logic for managing Car entities.
+    public class CarManager : ICarManager
     {
-        private readonly ICarDal _carDal;
-        private readonly IRentalDal _rentalDal;
+        private readonly ICarDal _carDal;  // Dependency for data access layer for Car
+        private readonly IRentalDal _rentalDal;  // Dependency for data access layer for Rental
 
-        // Constructor dependency injection (ICarDal bağımlılığını alıyoruz)
+        // Constructor that injects dependencies (ICarDal).
         public CarManager(ICarDal carDal)
         {
             _carDal = carDal;
         }
 
-        // Tüm araçları getir
+        // Retrieves all cars from the data access layer.
         public List<Car> GetAllCars()
         {
             return _carDal.GetAll();
         }
 
-        // Araba ekle
+        // Adds a new car, with business logic such as price validation.
         public void AddCar(Car car)
         {
-            // İş mantığı eklenebilir (örneğin, fiyat kontrolü, model kontrolü vb.)
+            // Validates that the car price is greater than 0.
             if (car.Price <= 0)
             {
-                throw new Exception("Araba fiyatı sıfırdan büyük olmalıdır.");
+                throw new Exception("Car price must be greater than zero.");
             }
 
-            _carDal.Add(car);
+            _carDal.Add(car);  // Adds the car using the data access layer.
         }
 
-        // Araba güncelle
+        // Updates an existing car, with business logic such as existence check.
         public void UpdateCar(Car car)
         {
-            // İş mantığı eklenebilir
-            var existingCar = _carDal.GetById(car.CarId);
+            var existingCar = _carDal.GetById(car.CarId);  // Fetches the car to be updated.
             if (existingCar == null)
             {
-                throw new Exception("Güncellenecek araba bulunamadı.");
+                throw new Exception("Car to update not found.");
             }
 
-            _carDal.Update(car);
+            _carDal.Update(car);  // Updates the car using the data access layer.
         }
 
-        // Araba sil
+        // Deletes a car using its ID, with existence validation.
         public void DeleteCar(int carId)
         {
-            var carToDelete = _carDal.GetById(carId);
+            var carToDelete = _carDal.GetById(carId);  // Fetches the car to be deleted.
             if (carToDelete == null)
             {
-                throw new Exception("Silinecek araba bulunamadı.");
+                throw new Exception("Car to delete not found.");
             }
 
-            _carDal.Delete(carToDelete);
+            _carDal.Delete(carToDelete);  // Deletes the car using the data access layer.
         }
 
-        // Kiralanabilir araçları getir
+        // Retrieves available cars for rent.
         public List<Car> GetAvailableCars()
         {
             return _carDal.GetAvailableCars();
         }
 
+        // Filters cars based on model, price range, and rental period.
         public List<Car> FilterCars(string model, decimal minPrice, decimal maxPrice, DateTime startDate, DateTime endDate)
         {
-            var cars = _carDal.GetAll();  // Tüm araçları alıyoruz
+            var cars = _carDal.GetAll();  // Retrieves all cars.
 
-            // Model filtresi
+            // Filters cars by model if provided.
             if (!string.IsNullOrEmpty(model))
             {
                 cars = cars.Where(c => c.Model.Contains(model)).ToList();
             }
 
-            // Fiyat filtresi
+            // Filters cars by price range.
             cars = cars.Where(c => c.Price >= minPrice && c.Price <= maxPrice).ToList();
 
-            // Kiralama tarih filtresi
+            // Filters cars by rental period.
             cars = cars.Where(c =>
             {
-                var rentals = _rentalDal.GetRentalsByCarId(c.CarId);
-                return rentals != null && !rentals.Any(r => r.StartDate >= startDate && r.EndDate <= endDate);
+                var rentals = _rentalDal.GetRentalsByCarId(c.CarId);  // Retrieves rental history for the car.
+                return rentals != null && !rentals.Any(r => r.StartDate >= startDate && r.EndDate <= endDate);  // Ensures the car is not rented during the specified period.
             }).ToList();
 
             return cars;

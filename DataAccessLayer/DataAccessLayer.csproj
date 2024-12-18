@@ -123,11 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\ICarDal.cs" />
-    <Compile Include="Abstract\IListingDal.cs" />
     <Compile Include="Abstract\IRentalDal.cs" />
     <Compile Include="Concrete\AppDbContext.cs" />
     <Compile Include="Concrete\CarDal.cs" />
-    <Compile Include="Concrete\ListingDal.cs" />
     <Compile Include="Concrete\RentalDal.cs" />
     <Compile Include="Migrations\202412131543239_InitialCreate.cs" />
     <Compile Include="Migrations\202412131543239_InitialCreate.Designer.cs">
@@ -144,6 +142,22 @@
     <Compile Include="Migrations\202412171355399_Update-Database.cs" />
     <Compile Include="Migrations\202412171355399_Update-Database.Designer.cs">
       <DependentUpon>202412171355399_Update-Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412181801402_AddFavoritesTable.cs" />
+    <Compile Include="Migrations\202412181801402_AddFavoritesTable.Designer.cs">
+      <DependentUpon>202412181801402_AddFavoritesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412181809047_UserId.cs" />
+    <Compile Include="Migrations\202412181809047_UserId.Designer.cs">
+      <DependentUpon>202412181809047_UserId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412181833479_U.cs" />
+    <Compile Include="Migrations\202412181833479_U.Designer.cs">
+      <DependentUpon>202412181833479_U.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412181842432_F.cs" />
+    <Compile Include="Migrations\202412181842432_F.Designer.cs">
+      <DependentUpon>202412181842432_F.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -170,6 +184,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202412171355399_Update-Database.resx">
       <DependentUpon>202412171355399_Update-Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412181801402_AddFavoritesTable.resx">
+      <DependentUpon>202412181801402_AddFavoritesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412181809047_UserId.resx">
+      <DependentUpon>202412181809047_UserId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412181833479_U.resx">
+      <DependentUpon>202412181833479_U.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412181842432_F.resx">
+      <DependentUpon>202412181842432_F.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

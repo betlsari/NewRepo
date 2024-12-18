@@ -53,9 +53,9 @@
             this.chkIsAvailable.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.chkIsAvailable.Location = new System.Drawing.Point(485, 354);
             this.chkIsAvailable.Name = "chkIsAvailable";
-            this.chkIsAvailable.Size = new System.Drawing.Size(127, 28);
+            this.chkIsAvailable.Size = new System.Drawing.Size(185, 28);
             this.chkIsAvailable.TabIndex = 2;
-            this.chkIsAvailable.Text = "Uygun mu ";
+            this.chkIsAvailable.Text = "Is it suitable now?";
             this.chkIsAvailable.UseVisualStyleBackColor = true;
             // 
             // txtAddPrice
@@ -72,7 +72,7 @@
             this.btnAddListing.Name = "btnAddListing";
             this.btnAddListing.Size = new System.Drawing.Size(329, 48);
             this.btnAddListing.TabIndex = 4;
-            this.btnAddListing.Text = "İLAN EKLE";
+            this.btnAddListing.Text = "Add Listing";
             this.btnAddListing.UseVisualStyleBackColor = true;
             this.btnAddListing.Click += new System.EventHandler(this.btnAddListing_Click);
             // 
@@ -104,9 +104,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(340, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 39);
+            this.label1.Size = new System.Drawing.Size(258, 39);
             this.label1.TabIndex = 7;
-            this.label1.Text = "İLAN EKLEME SAYFASI ";
+            this.label1.Text = "Add Listing Page";
             // 
             // label2
             // 
@@ -114,19 +114,19 @@
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(370, 286);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 24);
+            this.label2.Size = new System.Drawing.Size(107, 24);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Araç Adı";
+            this.label2.Text = "Car\'s Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(353, 314);
+            this.label3.Location = new System.Drawing.Point(370, 314);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 24);
+            this.label3.Size = new System.Drawing.Size(98, 24);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Araç Fiyatı";
+            this.label3.Text = "Car\'s Price";
             // 
             // AddCarForm
             // 

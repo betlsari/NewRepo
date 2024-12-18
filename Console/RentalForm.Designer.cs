@@ -75,7 +75,7 @@
             this.btnRent.Name = "btnRent";
             this.btnRent.Size = new System.Drawing.Size(480, 52);
             this.btnRent.TabIndex = 3;
-            this.btnRent.Text = "Aracı Kirala";
+            this.btnRent.Text = "Rent The Car";
             this.btnRent.UseVisualStyleBackColor = true;
             this.btnRent.Click += new System.EventHandler(this.btnRent_Click);
             // 
@@ -96,7 +96,7 @@
             this.goToRentaledForm.Name = "goToRentaledForm";
             this.goToRentaledForm.Size = new System.Drawing.Size(480, 52);
             this.goToRentaledForm.TabIndex = 6;
-            this.goToRentaledForm.Text = "Kiralanan Araçları Görmek İçin Tıklayınız";
+            this.goToRentaledForm.Text = "Click to See Rental Cars";
             this.goToRentaledForm.UseVisualStyleBackColor = true;
             this.goToRentaledForm.Click += new System.EventHandler(this.goToRentaledForm_Click);
             // 
@@ -104,31 +104,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(246, 15);
+            this.label1.Location = new System.Drawing.Point(305, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 37);
+            this.label1.Size = new System.Drawing.Size(239, 37);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Araç Kiralama Sayfası";
+            this.label1.Text = "Car Rental Page";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(203, 300);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(226, 304);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 20);
+            this.label2.Size = new System.Drawing.Size(96, 24);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Başlangıç Tarihi";
+            this.label2.Text = "Start Date";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(226, 328);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 20);
+            this.label3.Size = new System.Drawing.Size(87, 24);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Bitiş Tarihi";
+            this.label3.Text = "End Date";
             // 
             // RentalForm
             // 

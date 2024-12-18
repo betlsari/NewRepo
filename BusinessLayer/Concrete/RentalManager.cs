@@ -9,75 +9,77 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class RentalManager:IRentalManager
+    // The RentalManager class implements IRentalManager and provides business logic for managing rental entities.
+    public class RentalManager : IRentalManager
     {
-        private readonly IRentalDal _rentalDal;
+        private readonly IRentalDal _rentalDal;  // Dependency for data access layer for Rentals
 
-        // Constructor dependency injection (IRentalDal bağımlılığını alıyoruz)
+        // Constructor that injects dependencies (IRentalDal).
         public RentalManager(IRentalDal rentalDal)
         {
             _rentalDal = rentalDal;
         }
 
-        // Tüm kiralamaları getir
+        // Retrieves all rentals from the system.
         public List<Rental> GetAllRentals()
         {
-            return _rentalDal.GetAll();
+            return _rentalDal.GetAll();  // Fetches all rentals using the data access layer.
         }
 
-        // Bir kiralama ekle
+        // Adds a new rental to the system.
         public void AddRental(Rental rental)
         {
-            // İş mantığı eklenebilir (örneğin, araba mevcut mu kontrolü vb.)
-            var car = _rentalDal.GetRentalsByCarId(rental.CarId);
+            // Business logic can be added here (e.g., checking if the car is available).
+            var car = _rentalDal.GetRentalsByCarId(rental.CarId);  // Checks if the car is already rented.
             if (car != null && car.Count > 0)
             {
-                throw new Exception("Bu araba zaten kiralanmış.");
+                throw new Exception("This car is already rented.");
             }
 
-            _rentalDal.Add(rental);
+            _rentalDal.Add(rental);  // Adds the rental using the data access layer.
         }
 
-        // Bir kiralamayı güncelle
+        // Updates an existing rental.
         public void UpdateRental(Rental rental)
         {
-            // İş mantığı eklenebilir
-            var existingRental = _rentalDal.GetById(rental.RentalId);
+            // Business logic can be added here.
+            var existingRental = _rentalDal.GetById(rental.RentalId);  // Retrieves the existing rental by ID.
             if (existingRental == null)
             {
-                throw new Exception("Güncellenecek kiralama bulunamadı.");
+                throw new Exception("Rental to be updated not found.");
             }
 
-            _rentalDal.Update(rental);
+            _rentalDal.Update(rental);  // Updates the rental using the data access layer.
         }
 
-        // Bir kiralamayı sil
+        // Deletes a rental by its ID.
         public void DeleteRental(int rentalId)
         {
-            var rentalToDelete = _rentalDal.GetById(rentalId);
+            var rentalToDelete = _rentalDal.GetById(rentalId);  // Retrieves the rental to delete.
             if (rentalToDelete == null)
             {
-                throw new Exception("Silinecek kiralama bulunamadı.");
+                throw new Exception("Rental to be deleted not found.");
             }
 
-            _rentalDal.Delete(rentalToDelete);
+            _rentalDal.Delete(rentalToDelete);  // Deletes the rental using the data access layer.
         }
 
-        // Müşteriye ait kiralamaları getir
+        // Retrieves all rentals for a specific customer.
         public List<Rental> GetRentalsByCustomerId(int customerId)
         {
-            return _rentalDal.GetRentalsByCustomerId(customerId);
+            return _rentalDal.GetRentalsByCustomerId(customerId);  // Fetches rentals by customer ID using the data access layer.
         }
 
-        // Kiralanabilir araçları getir
+        // Retrieves available rentals (i.e., rentals for cars that are available).
         public List<Rental> GetAvailableRentals()
         {
-            return _rentalDal.GetAvailableCars();
+            return _rentalDal.GetAvailableCars();  // Fetches available rentals using the data access layer.
         }
 
+        // Retrieves rentals along with associated car models.
         public List<object> GetRentalsWithCarModels()
         {
-            return _rentalDal.GetRentalsWithCarModels();
+            return _rentalDal.GetRentalsWithCarModels();  // Fetches rentals with car models using the data access layer.
         }
     }
 }
