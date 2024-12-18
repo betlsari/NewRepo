@@ -14,12 +14,13 @@ using System.IO;
 
 namespace Console.Oğulcan
 {
-    public partial class YedekParcaSayfası : Form
+    public partial class YedekParcaSayfasi : Form
     {
+
         //The codes for opening a file for saving the data
         private string filePath = "listbox_data.text";
         private string filePath2 = "listbox_data2.text";
-        public YedekParcaSayfası()
+        public YedekParcaSayfasi()
         {
             InitializeComponent();
         }
@@ -187,4 +188,4 @@ namespace Console.Oğulcan
         }
     }
 }
-}
+
