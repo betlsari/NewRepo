@@ -106,6 +106,7 @@ namespace Console
                 // If no listing title is selected, show a message asking the user to select one
                 MessageBox.Show("Lütfen bir ilan başlığı seçin.");
             }
+            
         }
     }
 }

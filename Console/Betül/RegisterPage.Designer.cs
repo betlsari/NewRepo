@@ -50,7 +50,7 @@
             this.Register.Name = "Register";
             this.Register.Size = new System.Drawing.Size(370, 86);
             this.Register.TabIndex = 9;
-            this.Register.Text = "Register";
+            this.Register.Text = "Kayıt Ol";
             this.Register.UseVisualStyleBackColor = false;
             this.Register.Click += new System.EventHandler(this.Register_Click_1);
             // 
@@ -60,9 +60,9 @@
             this.name1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.name1.Location = new System.Drawing.Point(89, 58);
             this.name1.Name = "name1";
-            this.name1.Size = new System.Drawing.Size(70, 25);
+            this.name1.Size = new System.Drawing.Size(53, 25);
             this.name1.TabIndex = 10;
-            this.name1.Text = "Name:";
+            this.name1.Text = "İsim:";
             // 
             // surname1
             // 
@@ -70,9 +70,9 @@
             this.surname1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.surname1.Location = new System.Drawing.Point(72, 100);
             this.surname1.Name = "surname1";
-            this.surname1.Size = new System.Drawing.Size(98, 25);
+            this.surname1.Size = new System.Drawing.Size(87, 25);
             this.surname1.TabIndex = 11;
-            this.surname1.Text = "Surname:";
+            this.surname1.Text = "Soyisim:";
             // 
             // username1
             // 
@@ -80,9 +80,9 @@
             this.username1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.username1.Location = new System.Drawing.Point(57, 151);
             this.username1.Name = "username1";
-            this.username1.Size = new System.Drawing.Size(116, 25);
+            this.username1.Size = new System.Drawing.Size(125, 25);
             this.username1.TabIndex = 12;
-            this.username1.Text = "User Name:";
+            this.username1.Text = "Kullanıcı Adı:";
             // 
             // password1
             // 
@@ -90,9 +90,9 @@
             this.password1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.password1.Location = new System.Drawing.Point(66, 207);
             this.password1.Name = "password1";
-            this.password1.Size = new System.Drawing.Size(104, 25);
+            this.password1.Size = new System.Drawing.Size(58, 25);
             this.password1.TabIndex = 13;
-            this.password1.Text = "Password:";
+            this.password1.Text = "Şifre:";
             // 
             // checkBox1
             // 
@@ -100,9 +100,9 @@
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.checkBox1.Location = new System.Drawing.Point(303, 203);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(151, 24);
+            this.checkBox1.Size = new System.Drawing.Size(134, 24);
             this.checkBox1.TabIndex = 19;
-            this.checkBox1.Text = "Show Password";
+            this.checkBox1.Text = "Şifreyi Göster";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.eMail);
@@ -182,7 +182,6 @@
             this.Controls.Add(this.Register);
             this.Name = "RegisterPage";
             this.Text = "Form2";
-            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
