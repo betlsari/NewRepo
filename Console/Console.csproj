@@ -106,11 +106,11 @@
     <Compile Include="FavoritesForm.Designer.cs">
       <DependentUpon>FavoritesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Ilan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Ilan.Designer.cs">
+      <DependentUpon>Ilan.cs</DependentUpon>
     </Compile>
     <Compile Include="Betül\Forum.cs">
       <SubType>Form</SubType>
@@ -163,11 +163,11 @@
     <Compile Include="Betül\UserManagement.Designer.cs">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Samet\MainMenu.cs">
+    <Compile Include="Samet\MainMenü.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Samet\MainMenu.Designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <Compile Include="Samet\MainMenü.Designer.cs">
+      <DependentUpon>MainMenü.cs</DependentUpon>
     </Compile>
     <Compile Include="Samet\Services.cs">
       <SubType>Form</SubType>
@@ -196,8 +196,8 @@
     <EmbeddedResource Include="FavoritesForm.resx">
       <DependentUpon>FavoritesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Ilan.resx">
+      <DependentUpon>Ilan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Betül\Forum.resx">
       <DependentUpon>Forum.cs</DependentUpon>
@@ -232,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Betül\UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samet\MainMenü.resx">
+      <DependentUpon>MainMenü.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Samet\Services.resx">
       <DependentUpon>Services.cs</DependentUpon>

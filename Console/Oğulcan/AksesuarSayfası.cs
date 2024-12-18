@@ -40,13 +40,7 @@ namespace Console.Oğulcan
         }
 
        
-        private void btnGeriDön_Click(object sender, EventArgs e)
-        {
-            //it goes to the previous page
-            SecenekSayfası geridön = new SecenekSayfası();
-            geridön.Show();
-            this.Hide();
-        }
+
 
         private void button2_Click_1(object sender, EventArgs e)
         {
@@ -85,6 +79,14 @@ namespace Console.Oğulcan
             File.WriteAllLines(filePath3, listBox1.Items.Cast<string>());
 
 
+        }
+
+        private void btnGeriDön_Click_1(object sender, EventArgs e)
+        {
+            //it goes to the previous page
+            SecenekSayfası geridön = new SecenekSayfası();
+            geridön.Show();
+            this.Hide();
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using Console.Oğulcan;
+using Console.Samet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Console
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new YedekParcaSayfasi());
+            Application.Run(new MainMenü());
         }
     }
 }
