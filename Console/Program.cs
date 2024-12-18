@@ -19,7 +19,7 @@ namespace Console
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenü());
+            Application.Run(new YedekParcaSayfasi());
         }
     }
 }

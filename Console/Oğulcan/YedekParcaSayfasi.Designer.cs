@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YedekParcaSayfasi));
             this.label1 = new System.Windows.Forms.Label();
             this.btnYdkParcaİlan = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,15 +62,21 @@
             this.lblYilGöster = new System.Windows.Forms.Label();
             this.lblParcaGöster = new System.Windows.Forms.Label();
             this.lblFiyatGöster = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(301, 33);
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(274, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(409, 24);
+            this.label1.Size = new System.Drawing.Size(710, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Araç Yedek Parçaları Sayfasına Hoşgeldiniz...";
             // 
@@ -228,7 +235,7 @@
             // btnGeriDön
             // 
             this.btnGeriDön.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGeriDön.Location = new System.Drawing.Point(36, 612);
+            this.btnGeriDön.Location = new System.Drawing.Point(594, 612);
             this.btnGeriDön.Name = "btnGeriDön";
             this.btnGeriDön.Size = new System.Drawing.Size(240, 112);
             this.btnGeriDön.TabIndex = 17;
@@ -263,7 +270,7 @@
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(337, 335);
+            this.listBox2.Location = new System.Drawing.Point(680, 118);
             this.listBox2.Name = "listBox2";
             this.listBox2.ScrollAlwaysVisible = true;
             this.listBox2.Size = new System.Drawing.Size(316, 148);
@@ -275,7 +282,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(333, 287);
+            this.label9.Location = new System.Drawing.Point(676, 91);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(151, 24);
             this.label9.TabIndex = 21;
@@ -285,7 +292,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(337, 514);
+            this.button1.Location = new System.Drawing.Point(639, 357);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 42);
             this.button1.TabIndex = 22;
@@ -297,7 +304,7 @@
             // 
             this.lblMarka.AutoSize = true;
             this.lblMarka.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMarka.Location = new System.Drawing.Point(802, 170);
+            this.lblMarka.Location = new System.Drawing.Point(332, 321);
             this.lblMarka.Name = "lblMarka";
             this.lblMarka.Size = new System.Drawing.Size(68, 21);
             this.lblMarka.TabIndex = 23;
@@ -308,7 +315,7 @@
             // 
             this.lblModel.AutoSize = true;
             this.lblModel.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblModel.Location = new System.Drawing.Point(803, 209);
+            this.lblModel.Location = new System.Drawing.Point(333, 360);
             this.lblModel.Name = "lblModel";
             this.lblModel.Size = new System.Drawing.Size(67, 21);
             this.lblModel.TabIndex = 24;
@@ -319,7 +326,7 @@
             // 
             this.lblYil.AutoSize = true;
             this.lblYil.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYil.Location = new System.Drawing.Point(833, 250);
+            this.lblYil.Location = new System.Drawing.Point(363, 401);
             this.lblYil.Name = "lblYil";
             this.lblYil.Size = new System.Drawing.Size(37, 21);
             this.lblYil.TabIndex = 25;
@@ -330,7 +337,7 @@
             // 
             this.lblParca.AutoSize = true;
             this.lblParca.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblParca.Location = new System.Drawing.Point(810, 287);
+            this.lblParca.Location = new System.Drawing.Point(340, 438);
             this.lblParca.Name = "lblParca";
             this.lblParca.Size = new System.Drawing.Size(60, 21);
             this.lblParca.TabIndex = 26;
@@ -341,7 +348,7 @@
             // 
             this.lblFiyat.AutoSize = true;
             this.lblFiyat.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFiyat.Location = new System.Drawing.Point(814, 320);
+            this.lblFiyat.Location = new System.Drawing.Point(344, 471);
             this.lblFiyat.Name = "lblFiyat";
             this.lblFiyat.Size = new System.Drawing.Size(56, 21);
             this.lblFiyat.TabIndex = 27;
@@ -352,7 +359,7 @@
             // 
             this.lblMarkaGöster.AutoSize = true;
             this.lblMarkaGöster.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMarkaGöster.Location = new System.Drawing.Point(921, 170);
+            this.lblMarkaGöster.Location = new System.Drawing.Point(451, 321);
             this.lblMarkaGöster.Name = "lblMarkaGöster";
             this.lblMarkaGöster.Size = new System.Drawing.Size(64, 21);
             this.lblMarkaGöster.TabIndex = 30;
@@ -363,7 +370,7 @@
             // 
             this.lblModelGöster.AutoSize = true;
             this.lblModelGöster.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblModelGöster.Location = new System.Drawing.Point(921, 209);
+            this.lblModelGöster.Location = new System.Drawing.Point(451, 360);
             this.lblModelGöster.Name = "lblModelGöster";
             this.lblModelGöster.Size = new System.Drawing.Size(66, 21);
             this.lblModelGöster.TabIndex = 31;
@@ -374,7 +381,7 @@
             // 
             this.lblYilGöster.AutoSize = true;
             this.lblYilGöster.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYilGöster.Location = new System.Drawing.Point(921, 250);
+            this.lblYilGöster.Location = new System.Drawing.Point(451, 401);
             this.lblYilGöster.Name = "lblYilGöster";
             this.lblYilGöster.Size = new System.Drawing.Size(66, 21);
             this.lblYilGöster.TabIndex = 32;
@@ -385,7 +392,7 @@
             // 
             this.lblParcaGöster.AutoSize = true;
             this.lblParcaGöster.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblParcaGöster.Location = new System.Drawing.Point(921, 289);
+            this.lblParcaGöster.Location = new System.Drawing.Point(451, 440);
             this.lblParcaGöster.Name = "lblParcaGöster";
             this.lblParcaGöster.Size = new System.Drawing.Size(66, 21);
             this.lblParcaGöster.TabIndex = 33;
@@ -396,19 +403,53 @@
             // 
             this.lblFiyatGöster.AutoSize = true;
             this.lblFiyatGöster.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFiyatGöster.Location = new System.Drawing.Point(921, 320);
+            this.lblFiyatGöster.Location = new System.Drawing.Point(451, 471);
             this.lblFiyatGöster.Name = "lblFiyatGöster";
             this.lblFiyatGöster.Size = new System.Drawing.Size(66, 21);
             this.lblFiyatGöster.TabIndex = 34;
             this.lblFiyatGöster.Text = "label15";
             this.lblFiyatGöster.Visible = false;
             // 
-            // YedekParcaSayfası
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(630, 450);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(162, 156);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.SlateGray;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(862, 337);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(391, 387);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1032, 118);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(210, 148);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 37;
+            this.pictureBox3.TabStop = false;
+            // 
+            // YedekParcaSayfasi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.BlueViolet;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1296, 736);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblFiyatGöster);
             this.Controls.Add(this.lblParcaGöster);
             this.Controls.Add(this.lblYilGöster);
@@ -441,9 +482,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnYdkParcaİlan);
             this.Controls.Add(this.label1);
-            this.Name = "YedekParcaSayfası";
+            this.Name = "YedekParcaSayfasi";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,6 +527,9 @@
         private System.Windows.Forms.Label lblYilGöster;
         private System.Windows.Forms.Label lblParcaGöster;
         private System.Windows.Forms.Label lblFiyatGöster;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 
 
