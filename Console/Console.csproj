@@ -119,6 +119,12 @@
       <DependentUpon>Forum.cs</DependentUpon>
     </Compile>
     <Compile Include="Betül\Info.cs" />
+    <Compile Include="Oğulcan\YedekParcaSayfası.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oğulcan\YedekParcaSayfası.Designer.cs">
+      <DependentUpon>YedekParcaSayfası.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Betül\RegisterPage.cs">
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Betül\Forum.resx">
       <DependentUpon>Forum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oğulcan\YedekParcaSayfası.resx">
+      <DependentUpon>YedekParcaSayfası.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
