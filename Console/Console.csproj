@@ -151,6 +151,18 @@
     <Compile Include="Betül\UserManagement.Designer.cs">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Samet\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samet\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Samet\Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Samet\Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCarForm.resx">
       <DependentUpon>AddCarForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Betül\UserManagement.resx">
       <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samet\Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
