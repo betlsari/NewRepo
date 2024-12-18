@@ -77,5 +77,10 @@ namespace Console.Betül
             ResetPage form3 = new ResetPage(); // Create an instance of the ResetPage form
             form3.Show(); // Show the ResetPage form
         }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

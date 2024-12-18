@@ -70,7 +70,7 @@
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(310, 54);
             this.reset.TabIndex = 3;
-            this.reset.Text = "RESET";
+            this.reset.Text = "Sıfırla";
             this.reset.UseVisualStyleBackColor = false;
             this.reset.Click += new System.EventHandler(this.reset_Click_1);
             // 
@@ -88,21 +88,21 @@
             // 
             this.password.AutoSize = true;
             this.password.BackColor = System.Drawing.Color.DarkGray;
-            this.password.Location = new System.Drawing.Point(91, 248);
+            this.password.Location = new System.Drawing.Point(124, 248);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(100, 16);
+            this.password.Size = new System.Drawing.Size(67, 16);
             this.password.TabIndex = 5;
-            this.password.Text = "New Password:";
+            this.password.Text = "Yeni Şifre:";
             // 
             // againpassword
             // 
             this.againpassword.AutoSize = true;
             this.againpassword.BackColor = System.Drawing.Color.DarkGray;
-            this.againpassword.Location = new System.Drawing.Point(53, 291);
+            this.againpassword.Location = new System.Drawing.Point(81, 294);
             this.againpassword.Name = "againpassword";
-            this.againpassword.Size = new System.Drawing.Size(138, 16);
+            this.againpassword.Size = new System.Drawing.Size(110, 16);
             this.againpassword.TabIndex = 6;
-            this.againpassword.Text = "New Password Again:";
+            this.againpassword.Text = "Yeni Şifre Tekrar:";
             // 
             // checkBox1
             // 
@@ -110,9 +110,9 @@
             this.checkBox1.BackColor = System.Drawing.Color.DarkKhaki;
             this.checkBox1.Location = new System.Drawing.Point(352, 242);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(124, 20);
+            this.checkBox1.Size = new System.Drawing.Size(109, 20);
             this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Show password";
+            this.checkBox1.Text = "Şifreyi Göster";
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -122,9 +122,9 @@
             this.checkBox2.BackColor = System.Drawing.Color.DarkKhaki;
             this.checkBox2.Location = new System.Drawing.Point(352, 288);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(124, 20);
+            this.checkBox2.Size = new System.Drawing.Size(109, 20);
             this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "Show password";
+            this.checkBox2.Text = "Şifreyi Göster";
             this.checkBox2.UseVisualStyleBackColor = false;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
@@ -141,19 +141,19 @@
             this.username5.BackColor = System.Drawing.Color.DarkGray;
             this.username5.Location = new System.Drawing.Point(118, 159);
             this.username5.Name = "username5";
-            this.username5.Size = new System.Drawing.Size(73, 16);
+            this.username5.Size = new System.Drawing.Size(82, 16);
             this.username5.TabIndex = 10;
-            this.username5.Text = "Username:";
+            this.username5.Text = "Kullanıcı Adı:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MV Boli", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-18, 9);
+            this.label1.Location = new System.Drawing.Point(29, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(794, 79);
+            this.label1.Size = new System.Drawing.Size(561, 79);
             this.label1.TabIndex = 11;
-            this.label1.Text = "RESET YOUR PASSWORD";
+            this.label1.Text = "ŞİFRENİ SIFIRLA!";
             // 
             // pictureBox1
             // 
@@ -169,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.BackColor = System.Drawing.Color.DarkKhaki;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);

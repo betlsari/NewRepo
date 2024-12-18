@@ -55,7 +55,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 37);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Log In";
+            this.button2.Text = "Giriş Yap";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -65,9 +65,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(25, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 32);
+            this.label1.Size = new System.Drawing.Size(180, 32);
             this.label1.TabIndex = 2;
-            this.label1.Text = "User Name:";
+            this.label1.Text = "Kullanıcı Adı:";
             // 
             // textBox1
             // 
@@ -84,9 +84,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(42, 191);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 32);
+            this.label2.Size = new System.Drawing.Size(81, 32);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Password:";
+            this.label2.Text = "Şifre:";
             // 
             // checkBox1
             // 
@@ -94,9 +94,9 @@
             this.checkBox1.Location = new System.Drawing.Point(374, 203);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(125, 20);
+            this.checkBox1.Size = new System.Drawing.Size(109, 20);
             this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Show Password";
+            this.checkBox1.Text = "Şifreyi Göster";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -109,7 +109,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(213, 40);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Register";
+            this.button1.Text = "Kayıt Ol!";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -119,9 +119,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(43, 365);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(254, 25);
+            this.label3.Size = new System.Drawing.Size(262, 25);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Don\'t you have an account?";
+            this.label3.Text = "Henüz bir hesabınız yok mu?";
             // 
             // textBox3
             // 
@@ -141,9 +141,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(503, 331);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(254, 22);
+            this.label4.Size = new System.Drawing.Size(189, 22);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Did you forget your password?";
+            this.label4.Text = "Şifrenizi mi unuttunuz?";
             // 
             // button4
             // 
@@ -159,17 +159,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(6, -18);
+            this.label5.Font = new System.Drawing.Font("Poor Richard", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(16, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(751, 135);
+            this.label5.Size = new System.Drawing.Size(554, 90);
             this.label5.TabIndex = 27;
-            this.label5.Text = "WELCOME !";
+            this.label5.Text = "HOŞGELDİNİZ!";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(567, 104);
+            this.pictureBox1.Location = new System.Drawing.Point(543, 104);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(221, 209);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkKhaki;
+            this.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
@@ -197,7 +197,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Register";
             this.Text = "Form1";
-            
+            this.Load += new System.EventHandler(this.Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
