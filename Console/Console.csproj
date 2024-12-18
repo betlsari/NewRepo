@@ -119,11 +119,23 @@
       <DependentUpon>Forum.cs</DependentUpon>
     </Compile>
     <Compile Include="Betül\Info.cs" />
-    <Compile Include="Oğulcan\YedekParcaSayfası.cs">
+    <Compile Include="Oğulcan\AksesuarSayfası.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Oğulcan\YedekParcaSayfası.Designer.cs">
-      <DependentUpon>YedekParcaSayfası.cs</DependentUpon>
+    <Compile Include="Oğulcan\AksesuarSayfası.Designer.cs">
+      <DependentUpon>AksesuarSayfası.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oğulcan\SecenekSayfası.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oğulcan\SecenekSayfası.Designer.cs">
+      <DependentUpon>SecenekSayfası.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oğulcan\YedekParcaSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oğulcan\YedekParcaSayfasi.Designer.cs">
+      <DependentUpon>YedekParcaSayfasi.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -190,8 +202,14 @@
     <EmbeddedResource Include="Betül\Forum.resx">
       <DependentUpon>Forum.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Oğulcan\YedekParcaSayfası.resx">
-      <DependentUpon>YedekParcaSayfası.cs</DependentUpon>
+    <EmbeddedResource Include="Oğulcan\AksesuarSayfası.resx">
+      <DependentUpon>AksesuarSayfası.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oğulcan\SecenekSayfası.resx">
+      <DependentUpon>SecenekSayfası.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oğulcan\YedekParcaSayfasi.resx">
+      <DependentUpon>YedekParcaSayfasi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

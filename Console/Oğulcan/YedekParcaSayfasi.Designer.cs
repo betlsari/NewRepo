@@ -1,7 +1,8 @@
 ﻿namespace Console.Oğulcan
 {
-    partial class YedekParcaSayfası
+    partial class YedekParcaSayfasi
     {
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -483,5 +484,6 @@
         private System.Windows.Forms.Label lblParcaGöster;
         private System.Windows.Forms.Label lblFiyatGöster;
     }
-}
+
+
 }
