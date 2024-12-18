@@ -12,15 +12,18 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace DataAccessLayer
 {
-    public class AppDbContext:DbContext
+    // The AppDbContext class inherits from DbContext and provides the database context for the application.
+    public class AppDbContext : DbContext
     {
-        public AppDbContext() : base("name=CarRental") { }  // connection string
+        // Constructor that passes the connection string name "CarRental" to the base DbContext class.
+        // This connection string is defined in the application's configuration file (e.g., App.config or Web.config).
+        public AppDbContext() : base("name=CarRental") { }
 
-        public DbSet<Listing> Listings { get; set; }
+
+        // DbSet property for the Rentals table in the database.
         public DbSet<Rental> Rentals { get; set; }
+
+        // DbSet property for the Cars table in the database.
         public DbSet<Car> Cars { get; set; }
-        public DbSet<Favorite> Favorites { get; set; }
-
-
     }
 }

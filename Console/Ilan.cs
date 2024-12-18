@@ -1,9 +1,11 @@
 ﻿using BusinessLayer.Abstract;
 using BusinessLayer.Concrete;
 using Console.Betül;
+using Console.Samet;
 using DataAccessLayer;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
+using DataAccessLayer.Migrations;
 using EntityLayer;
 using System;
 using System.Collections.Generic;
@@ -23,85 +25,67 @@ namespace Console
 {
     public partial class Ilan : Form
     {
+        // Constructor to initialize the form
         public Ilan()
         {
             InitializeComponent();
-
-
-
-            /* carDal = new CarDal();  // Örnek olarak CarDal'ı kullanıyoruz
-             rentalDal = new RentalDal();  // Örnek olarak RentalDal'ı kullanıyoruz
-
-             // CarManager nesnesini oluşturuyoruz
-             carManager = new CarManager(carDal);  // ICarDal ve IRentalDal'ı CarManager'a inject ediyoruz
-             rentalManager = new RentalManager(rentalDal);*/
         }
 
+        // This method is triggered when the form is loaded
         private void Form1_Load(object sender, EventArgs e)
         {
-            TimerFunc();
-            //ekleme deneme  
-            ListOfRentals();
-            ListOfCars();
+            TimerFunc(); // Starts the timer to check car availability periodically
+            ListOfRentals(); // Load the list of rentals (for rental-related operations)
+            ListOfCars(); // Load the list of cars (for available car listings)
         }
 
-
-        // Timer  // Her 30 saniyede bir tarihi kontrol ediyor . 
+        // Timer method to check car availability every 10 seconds
         private void TimerFunc()
         {
             Timer timer = new Timer();
-            timer.Interval = 10000; // Her 10 saniyede bir kontrol
-            timer.Tick += Timer_Tick;
-            timer.Start();
+            timer.Interval = 10000; // Set the interval to 10 seconds
+            timer.Tick += Timer_Tick; // Attach the event handler
+            timer.Start(); // Start the timer
         }
 
+        // This method is triggered every time the timer ticks
         private void Timer_Tick(object sender, EventArgs e)
         {
-            UpdateCarAvailability();
+            UpdateCarAvailability(); // Update car availability status
         }
 
+        // This method updates the availability of cars based on rental end date
         private void UpdateCarAvailability()
         {
             using (AppDbContext context = new AppDbContext())
             {
-                // Bugünkü tarihi al
-                DateTime today = DateTime.Now;
+                DateTime today = DateTime.Now; // Get today's date
 
-                // Kiralama bitiş tarihi geçmiş olan araçları bul
+                // Get all rentals where the end date has passed
                 var rentals = context.Rentals
                     .Where(r => r.EndDate < today)
                     .ToList();
 
                 foreach (var rental in rentals)
                 {
-                    // Aracın durumunu güncelle
+                    // Update the car status to available if the rental has ended
                     var car = context.Cars.FirstOrDefault(c => c.CarId == rental.CarId);
                     if (car != null && !car.isAvailable)
                     {
-                        car.isAvailable = true; // Aracı tekrar kiralanabilir yap
+                        car.isAvailable = true; // Mark the car as available
                     }
-
-                    // Gerekirse kiralama kaydını da silebilirsin
-                    // context.Rentals.Remove(rental);
                 }
 
-                // Değişiklikleri kaydet
-                context.SaveChanges();
+                context.SaveChanges(); // Save changes to the database
             }
-
-            // Listeyi yenile
-
         }
 
-        // TİMER BİTİŞ 
-
-
-
-        // DGW LİSTELERİ 
+        // This method loads and displays the list of rentals with car models
         private void ListOfRentals()
         {
             using (AppDbContext context = new AppDbContext())
             {
+                // Query to join rentals with car models and get necessary details
                 var rentalsWithCars = from rental in context.Rentals
                                       join car in context.Cars
                                       on rental.CarId equals car.CarId
@@ -113,203 +97,144 @@ namespace Console
                                           StartDate = rental.StartDate,
                                           EndDate = rental.EndDate
                                       };
-                /* var carModels = context.Rentals
-                    .Select(c => c.CarId)
-                    .Distinct()
-                    .ToList(); */
-                // cbxRental.DataSource = carModels;
-
-
+                // dgwRentals.DataSource = rentalsWithCars.ToList(); 
             }
-            RentalManager rentalManager = new RentalManager(new RentalDal());
-            //dgwRentals.DataSource = rentalManager.GetAllRentals();
-            // dgwRentals.Columns["RentalId"].Visible = false;
-            //dgwRentals.Columns["UserId"].Visible = false;
-
         }
 
-
+        // This method loads and displays the list of available cars
         private void ListOfCars()
         {
             using (AppDbContext context = new AppDbContext())
             {
-                // Benzersiz araç modellerini alıyoruz ve ComboBox'a dolduruyoruz
+                // Get distinct car models to populate ComboBox
                 var carModels = context.Cars
                     .Select(c => c.Model)
                     .Distinct()
                     .ToList();
 
-                cbxCar.DataSource = carModels;
+                cbxCar.DataSource = carModels; // Bind car models to ComboBox
             }
 
-            // Kiralanabilir araçları listeleyelim
+            // Get available cars and bind them to DataGridView
             CarManager _carManager = new CarManager(new CarDal());
             dgwFilter.DataSource = _carManager.GetAvailableCars();
-
-            // isAvailable sütununu gizle
-            dgwFilter.Columns["isAvailable"].Visible = false;
-
-            // Favori butonunu DataGridView'e ekle (sadece bir kere eklenmesini sağlıyoruz)
-            if (!dgwFilter.Columns.Contains("FavoriteButton"))
-            {
-                DataGridViewButtonColumn favoriteButton = new DataGridViewButtonColumn();
-                favoriteButton.Name = "FavoriteButton";
-                favoriteButton.HeaderText = "Favoriye Ekle";
-                favoriteButton.Text = "Favori";
-                favoriteButton.UseColumnTextForButtonValue = true;
-
-                dgwFilter.Columns.Add(favoriteButton);
-            }
+            dgwFilter.Columns["isAvailable"].Visible = false; // Hide the availability column
         }
 
-
-
-        // FİLTRELER 
+        // This method filters cars based on the selected car model from ComboBox
         private void cbxCar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedModel = cbxCar.SelectedItem.ToString();  // Seçilen model
-
-            // Seçilen modele göre araçları filtreliyoruz
-            ListCarsByModel(selectedModel);
+            string selectedModel = cbxCar.SelectedItem.ToString(); // Get the selected model
+            ListCarsByModel(selectedModel); // Call method to filter cars by model
         }
+
+        // This method filters the cars list based on the selected model
         private void ListCarsByModel(string model)
         {
             using (AppDbContext context = new AppDbContext())
             {
-                // Seçilen modele göre araçları filtreliyoruz
+                // Filter cars based on model and availability
                 var cars = context.Cars
-                    .Where(c => c.Model == model && c.isAvailable == true)  // Kiralanabilir araçlar
+                    .Where(c => c.Model == model && c.isAvailable == true)
                     .ToList();
 
-                dgwFilter.DataSource = cars;
+                dgwFilter.DataSource = cars; // Bind filtered cars to DataGridView
             }
         }
+
+        // This method filters the cars list based on model name, minimum price, and maximum price
         private void ListCars(string modelKey, int? minPriceKey, int? maxPriceKey)
         {
             using (AppDbContext context = new AppDbContext())
             {
-                // Tüm araçlar ile başlıyoruz
-                var query = context.Cars.AsQueryable();
+                var query = context.Cars.AsQueryable(); // Start query with all cars
 
-                // Model adına göre filtreleme
+                // Filter by model if provided
                 if (!string.IsNullOrEmpty(modelKey))
                 {
                     query = query.Where(c => c.Model.Contains(modelKey));
                 }
 
-                // Min ve Max fiyatına göre filtreleme
+                // Filter by minimum price if provided
                 if (minPriceKey.HasValue)
                 {
-                    query = query.Where(c => c.Price >= minPriceKey.Value); // Min fiyat
+                    query = query.Where(c => c.Price >= minPriceKey.Value);
                 }
 
+                // Filter by maximum price if provided
                 if (maxPriceKey.HasValue)
                 {
-                    query = query.Where(c => c.Price <= maxPriceKey.Value); // Max fiyat
+                    query = query.Where(c => c.Price <= maxPriceKey.Value);
                 }
 
-                // Sadece kiralanabilir araçlar
+                // Only show available cars
                 query = query.Where(c => c.isAvailable == true);
 
-                // Sonuçları alıyoruz
+                // Get the filtered list of cars
                 var cars = query.ToList();
 
-                // Datagrid'e bind ediyoruz
+                // Bind the filtered cars to DataGridView
                 dgwFilter.DataSource = cars;
             }
-
-
-
-
-
         }
+
+        // This method is triggered when the text in the model name or price textboxes changes
         private void txtName_TextChanged(object sender, EventArgs e)
-        {  // Kullanıcı model adı ve fiyat aralığını girdiğinde filtreleme yapacağız
-            int? minPrice = string.IsNullOrEmpty(txtMinPrice.Text) ? (int?)null : Convert.ToInt32(txtMinPrice.Text); // Min fiyat
-            int? maxPrice = string.IsNullOrEmpty(txtMaxPrice.Text) ? (int?)null : Convert.ToInt32(txtMaxPrice.Text); // Max fiyat
+        {
+            int? minPrice = string.IsNullOrEmpty(txtMinPrice.Text) ? (int?)null : Convert.ToInt32(txtMinPrice.Text);
+            int? maxPrice = string.IsNullOrEmpty(txtMaxPrice.Text) ? (int?)null : Convert.ToInt32(txtMaxPrice.Text);
 
-            // ListCars metodunu çağırıyoruz (model adı, min ve max fiyat ile)
-            ListCars(txtName.Text, minPrice, maxPrice);
+            ListCars(txtName.Text, minPrice, maxPrice); // Call the ListCars method with new filters
         }
+
+        // This method is triggered when the minimum price textbox value changes
         private void txtPrice_TextChanged(object sender, EventArgs e)
         {
-            int? minPrice = string.IsNullOrEmpty(txtMinPrice.Text) ? (int?)null : Convert.ToInt32(txtMinPrice.Text); // Min fiyat
-            int? maxPrice = string.IsNullOrEmpty(txtMaxPrice.Text) ? (int?)null : Convert.ToInt32(txtMaxPrice.Text); // Max fiyat
+            int? minPrice = string.IsNullOrEmpty(txtMinPrice.Text) ? (int?)null : Convert.ToInt32(txtMinPrice.Text);
+            int? maxPrice = string.IsNullOrEmpty(txtMaxPrice.Text) ? (int?)null : Convert.ToInt32(txtMaxPrice.Text);
 
-            // ListCars metodunu çağırıyoruz (model adı, min ve max fiyat ile)
-            ListCars(txtName.Text, minPrice, maxPrice);
+            ListCars(txtName.Text, minPrice, maxPrice); // Call the ListCars method with updated filters
         }
 
+        // This method is triggered when the "Go to Rental Form" button is clicked
         private void goToRentalFormBtn_Click(object sender, EventArgs e)
         {
-            var rentalForm = new RentalForm();
-            rentalForm.Show();
-            this.Hide();
+            var rentalForm = new RentalForm(); // Create a new instance of RentalForm
+            rentalForm.Show(); // Show the RentalForm
+            this.Hide(); // Hide the current form
         }
 
+        // This method is triggered when the "Go to Add Car Form" button is clicked
         private void goToAddCarFormBtn_Click(object sender, EventArgs e)
         {
-            var addCarForm = new AddCarForm();
-            addCarForm.Show();
-            this.Hide();
+            var addCarForm = new AddCarForm(); // Create a new instance of AddCarForm
+            addCarForm.Show(); // Show the AddCarForm
+            this.Hide(); // Hide the current form
         }
 
+        // This method is triggered when the maximum price textbox value changes
         private void txtMaxPrice_TextChanged(object sender, EventArgs e)
         {
-            int? minPrice = string.IsNullOrEmpty(txtMinPrice.Text) ? (int?)null : Convert.ToInt32(txtMinPrice.Text); // Min fiyat
-            int? maxPrice = string.IsNullOrEmpty(txtMaxPrice.Text) ? (int?)null : Convert.ToInt32(txtMaxPrice.Text); // Max fiyat
+            int? minPrice = string.IsNullOrEmpty(txtMinPrice.Text) ? (int?)null : Convert.ToInt32(txtMinPrice.Text);
+            int? maxPrice = string.IsNullOrEmpty(txtMaxPrice.Text) ? (int?)null : Convert.ToInt32(txtMaxPrice.Text);
 
-            // ListCars metodunu çağırıyoruz (model adı, min ve max fiyat ile)
-            ListCars(txtName.Text, minPrice, maxPrice);
+            ListCars(txtName.Text, minPrice, maxPrice); // Call the ListCars method with updated filters
         }
 
+        // This method is triggered when the "Register" button is clicked
         private void button1_Click(object sender, EventArgs e)
         {
-            var Register = new Register();
-            Register.Show();
+            var Register = new Register(); // Create a new instance of Register form
+            Register.Show(); // Show the Register form
+            this.Hide(); // Hide the current form
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var mainMenu = new MainMenü();
+
+            mainMenu.Show();
             this.Hide();
-        }
-
-        private void dgwFilter_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgwFilter.Columns[e.ColumnIndex].Name == "FavoriteButton" && e.RowIndex >= 0)
-            {
-                // Seçili aracın ID'sini alalım
-                int carId = Convert.ToInt32(dgwFilter.Rows[e.RowIndex].Cells["Id"].Value);
-
-                using (AppDbContext context = new AppDbContext())
-                {
-                    // Seçili aracı bul
-                    var selectedCar = context.Cars.FirstOrDefault(c => c.CarId == carId);
-
-                    if (selectedCar != null)
-                    {
-                        // Eğer araç zaten favori ise uyarı ver
-                        if (selectedCar.isFavorite)
-                        {
-                            MessageBox.Show("Bu araç zaten favorilere eklenmiş!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            // Aracı favorilere ekle
-                            selectedCar.isFavorite = true;
-                            context.SaveChanges();
-
-                            MessageBox.Show("Araç favorilere eklendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
-
-                // Listeyi güncelle
-                ListOfCars();
-            }
-        }
-
-        private void btnShowFavorites_Click(object sender, EventArgs e)
-        {
-            var favoritesForm = new FavoritesForm();
-            favoritesForm.Show();
         }
     }
 }

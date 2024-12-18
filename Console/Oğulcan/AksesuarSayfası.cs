@@ -88,6 +88,8 @@ namespace Console.Oğulcan
             geridön.Show();
             this.Hide();
         }
+
+       
     }
 
 }

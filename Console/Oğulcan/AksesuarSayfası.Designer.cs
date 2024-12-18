@@ -56,7 +56,7 @@ namespace Console.Oğulcan
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 9);
+            this.label1.Location = new System.Drawing.Point(163, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(725, 38);
             this.label1.TabIndex = 0;
@@ -65,7 +65,7 @@ namespace Console.Oğulcan
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(43, 68);
+            this.button1.Location = new System.Drawing.Point(40, 98);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(233, 105);
@@ -77,7 +77,7 @@ namespace Console.Oğulcan
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(419, 68);
+            this.button2.Location = new System.Drawing.Point(621, 98);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(249, 105);
@@ -90,7 +90,7 @@ namespace Console.Oğulcan
             // 
             this.lblAksesuar.AutoSize = true;
             this.lblAksesuar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAksesuar.Location = new System.Drawing.Point(351, 193);
+            this.lblAksesuar.Location = new System.Drawing.Point(463, 226);
             this.lblAksesuar.Name = "lblAksesuar";
             this.lblAksesuar.Size = new System.Drawing.Size(133, 24);
             this.lblAksesuar.TabIndex = 3;
@@ -99,7 +99,7 @@ namespace Console.Oğulcan
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(509, 197);
+            this.textBox1.Location = new System.Drawing.Point(621, 230);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(159, 22);
@@ -110,7 +110,7 @@ namespace Console.Oğulcan
             // 
             this.lblAksesuarFiyat.AutoSize = true;
             this.lblAksesuarFiyat.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAksesuarFiyat.Location = new System.Drawing.Point(423, 241);
+            this.lblAksesuarFiyat.Location = new System.Drawing.Point(535, 287);
             this.lblAksesuarFiyat.Name = "lblAksesuarFiyat";
             this.lblAksesuarFiyat.Size = new System.Drawing.Size(61, 24);
             this.lblAksesuarFiyat.TabIndex = 5;
@@ -119,7 +119,7 @@ namespace Console.Oğulcan
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(509, 244);
+            this.textBox2.Location = new System.Drawing.Point(621, 290);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(159, 22);
@@ -129,7 +129,7 @@ namespace Console.Oğulcan
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(509, 287);
+            this.button3.Location = new System.Drawing.Point(621, 350);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 34);
@@ -142,7 +142,7 @@ namespace Console.Oğulcan
             // btnGeriDön
             // 
             this.btnGeriDön.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGeriDön.Location = new System.Drawing.Point(424, 530);
+            this.btnGeriDön.Location = new System.Drawing.Point(843, 486);
             this.btnGeriDön.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGeriDön.Name = "btnGeriDön";
             this.btnGeriDön.Size = new System.Drawing.Size(244, 114);
@@ -159,7 +159,7 @@ namespace Console.Oğulcan
             this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(246, 228);
+            this.listBox1.Size = new System.Drawing.Size(180, 180);
             this.listBox1.TabIndex = 9;
             this.listBox1.Visible = false;
             // 
@@ -167,7 +167,7 @@ namespace Console.Oğulcan
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 244);
+            this.label2.Location = new System.Drawing.Point(36, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(250, 42);
             this.label2.TabIndex = 10;
@@ -217,12 +217,8 @@ namespace Console.Oğulcan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BackColor = System.Drawing.Color.BlueViolet;
             this.ClientSize = new System.Drawing.Size(1157, 655);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnGeriDön);

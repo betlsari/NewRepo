@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Console.Samet;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,5 +34,11 @@ namespace Console.Oğulcan
             this.Hide();
         }
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            var mainMenu = new MainMenü();
+            mainMenu.Show();
+            this.Hide();
+        }
     }
 }

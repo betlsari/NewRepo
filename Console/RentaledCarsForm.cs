@@ -15,30 +15,42 @@ namespace Console
 {
     public partial class RentaledCarsForm : Form
     {
+        // Constructor method to initialize the form and its components
         public RentaledCarsForm()
         {
             InitializeComponent();
         }
 
+        // This method is called when the form is loaded
+        // It loads the list of rentals that have cars associated with them
         private void RentaledCarsForm_Load(object sender, EventArgs e)
         {
-            ListOfRentals();
+            ListOfRentals(); // Load the list of rentals when the form is loaded
         }
+
+        // This method retrieves and displays the list of rentals with associated car models
         private void ListOfRentals()
         {
+            // Create a RentalManager to manage rental operations
             RentalManager rentalManager = new RentalManager(new RentalDal());
+
+            // Set the data source of the DataGridView to the rentals with car models
             dgwRentals.DataSource = rentalManager.GetRentalsWithCarModels();
 
-            // İstenmeyen sütunları gizleme
-            dgwRentals.Columns["RentalId"].Visible = false;
-            dgwRentals.Columns["UserId"].Visible = false;
+            // Hide unwanted columns to make the DataGridView cleaner
+            dgwRentals.Columns["RentalId"].Visible = false; // Hide the RentalId column
+            dgwRentals.Columns["UserId"].Visible = false; // Hide the UserId column
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        // This method is triggered when the "Back to Rental Form" button is clicked
+        // It opens the RentalForm and hides the current form
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            var RentalForm = new RentalForm();
-            RentalForm.Show();
-            this.Hide();
+            var RentalForm = new RentalForm(); // Create a new instance of the RentalForm
+            RentalForm.Show(); // Show the RentalForm
+            this.Hide(); // Hide the current RentaledCarsForm
         }
     }
 }
