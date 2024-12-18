@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,9 +49,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(624, 207);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 16);
+            this.label10.Size = new System.Drawing.Size(62, 16);
             this.label10.TabIndex = 31;
-            this.label10.Text = "7.976.903$";
+            this.label10.Text = "4.123.450";
             // 
             // label9
             // 
@@ -91,42 +92,47 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.DarkGreen;
             this.label5.Location = new System.Drawing.Point(543, 207);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 16);
+            this.label5.Size = new System.Drawing.Size(39, 16);
             this.label5.TabIndex = 26;
-            this.label5.Text = "Price:";
+            this.label5.Text = "Fiyat:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.DarkGreen;
             this.label4.Location = new System.Drawing.Point(542, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 16);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Color:";
+            this.label4.Text = "Renk:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(523, 119);
+            this.label3.BackColor = System.Drawing.Color.DarkGreen;
+            this.label3.Location = new System.Drawing.Point(533, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
+            this.label3.Size = new System.Drawing.Size(51, 16);
             this.label3.TabIndex = 24;
-            this.label3.Text = "Location:";
+            this.label3.Text = "Konum:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(545, 80);
+            this.label2.BackColor = System.Drawing.Color.DarkGreen;
+            this.label2.Location = new System.Drawing.Point(559, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 16);
+            this.label2.Size = new System.Drawing.Size(25, 16);
             this.label2.TabIndex = 23;
-            this.label2.Text = "Year:";
+            this.label2.Text = "Yıl:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.DarkGreen;
             this.label11.Location = new System.Drawing.Point(536, 43);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(48, 16);
@@ -143,12 +149,24 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button1.Location = new System.Drawing.Point(500, 326);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(246, 60);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Satıcı İle İletişime Geç!";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // AudiA4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -182,5 +200,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

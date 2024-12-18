@@ -39,8 +39,9 @@ namespace Console.Samet
             this.Hide();
         }
 
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }
