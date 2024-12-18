@@ -21,9 +21,9 @@ using System.Xml.Linq;
 
 namespace Console
 {
-    public partial class Form1 : Form
+    public partial class Ilan : Form
     {
-        public Form1()
+        public Ilan()
         {
             InitializeComponent();
 

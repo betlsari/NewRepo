@@ -118,7 +118,7 @@ namespace Console
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var Form1 = new Form1();
+            var Form1 = new Ilan();
             Form1.Show();
             this.Hide();
         }
