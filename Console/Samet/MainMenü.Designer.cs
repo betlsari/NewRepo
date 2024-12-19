@@ -55,7 +55,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Menu;
             this.button3.Location = new System.Drawing.Point(946, 56);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(154, 40);
             this.button3.TabIndex = 4;
@@ -138,7 +138,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1127, 561);
+            this.ClientSize = new System.Drawing.Size(1146, 589);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dateTimePicker1);
@@ -147,7 +147,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.servisesBtn);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainMenü";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainMenü_Load);

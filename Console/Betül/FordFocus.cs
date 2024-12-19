@@ -16,22 +16,16 @@ namespace Console.Betül
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            SaticiIletisim st = new SaticiIletisim();
-            st.ShowDialog();
-            this.Hide();
-        }
-
+        
 
         private void FordFocus_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            SaticiIletisim sm= new SaticiIletisim();
+            SaticiIletisim sm = new SaticiIletisim();
             sm.ShowDialog();
             this.Hide();
         }
