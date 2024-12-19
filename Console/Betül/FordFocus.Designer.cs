@@ -49,9 +49,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(654, 205);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 16);
+            this.label10.Size = new System.Drawing.Size(62, 16);
             this.label10.TabIndex = 21;
-            this.label10.Text = "2.476.903$";
+            this.label10.Text = "2.476.903";
             // 
             // label9
             // 
@@ -94,9 +94,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(573, 205);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 16);
+            this.label5.Size = new System.Drawing.Size(39, 16);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Price:";
+            this.label5.Text = "Fiyat:";
             // 
             // label4
             // 
@@ -105,25 +105,25 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 16);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Color:";
+            this.label4.Text = "Renk:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(553, 117);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
+            this.label3.Size = new System.Drawing.Size(51, 16);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Location:";
+            this.label3.Text = "Konum:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(575, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 16);
+            this.label2.Size = new System.Drawing.Size(25, 16);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Year:";
+            this.label2.Text = "Yıl:";
             // 
             // label11
             // 
@@ -153,7 +153,7 @@
             this.button1.TabIndex = 23;
             this.button1.Text = "Satıcı İle İletişime Geç!";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FordFocus
             // 

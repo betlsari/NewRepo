@@ -17,19 +17,7 @@ namespace Console.Betül
             InitializeComponent();
         }
 
-        private void AudiA4_Load(object sender, EventArgs e)
-        {
-
-        }
         private void button1_Click(object sender, EventArgs e)
-        {
-            SaticiIletisim st = new SaticiIletisim();
-            st.ShowDialog();
-            this.Hide();
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
         {
             SaticiIletisim si = new SaticiIletisim();
             si.ShowDialog();

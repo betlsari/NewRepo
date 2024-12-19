@@ -15,11 +15,6 @@ namespace Console
     {
         private string userName0; // Variable to store the user's name
 
-        // Default constructor for the UserManagement form
-        public UserManagement()
-        {
-            InitializeComponent();
-        }
 
         // Constructor that takes a user name as an argument
         public UserManagement(string userName)
@@ -39,16 +34,8 @@ namespace Console
             comboBoxAd2.Items.Add("2019 Model Audi A4");
         }
 
-        // Event handler for the first button click (to go to the Seller Communication form)
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Open the "Seller Communication" form
-            SaticiIletisim saticiIletisimFormu = new SaticiIletisim();
-            saticiIletisimFormu.Show();
-
-            // Hide the current form (User Management form)
-            this.Hide();
-        }
+        
+       
 
         // Event handler for the second button click (to select a listing and view its details)
         private void button2_Click(object sender, EventArgs e)
