@@ -16,7 +16,7 @@ namespace Console
         public RegisterPage()
         {
             InitializeComponent();
-            password0.PasswordChar = '*'; // Set the password character to '*' for security
+            password0.PasswordChar = '*'; // Mask the password field with '*' for security
         }
 
         private void RegisterPage_Load(object sender, EventArgs e)
@@ -25,64 +25,55 @@ namespace Console
         }
 
         // Event handler for the checkbox to toggle password visibility
+        
+        // Event handler for the registration button click
+        private void Register_Click_1(object sender, EventArgs e)
+        {
+            // Check if the username is already registered
+            string savedUserName = Properties.Settings.Default.username;
+
+            // If the username already exists, do not allow registration
+            if (savedUserName != null && savedUserName == userName0.Text)
+            {
+                MessageBox.Show("You are already registered with this username.", "Already Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return; // Exit the function and stop further execution
+            }
+
+            // Before proceeding with registration, check if any fields are empty
+            if (name0.Text == "" || surname0.Text == "" || userName0.Text == "" || password0.Text == "")
+            {
+                MessageBox.Show("\r\nPlease do not leave any fields empty.", "Incorrect Operation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // Save user information
+                Properties.Settings.Default.name = name0.Text;
+                Properties.Settings.Default.surname = surname0.Text;
+                Properties.Settings.Default.username = userName0.Text;
+                Properties.Settings.Default.password = password0.Text;
+                Properties.Settings.Default.email = eMail.Text; // Save email information as well
+                Properties.Settings.Default.Save(); // Save the settings
+
+                // Display success message
+                MessageBox.Show("Registration Successful!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked) // If the checkbox is checked, show the password in plain text
+            if (checkBox1.Checked) // If the checkbox is checked, display the password as plain text
             {
                 password0.PasswordChar = '\0'; // Remove the password masking character
             }
             else // If the checkbox is unchecked, mask the password with '*'
             {
-                password0.PasswordChar = '*'; // Set the password character to '*'
+                password0.PasswordChar = '*'; // Restore the password masking character
             }
         }
-
-        // Duplicate event handler for password visibility toggle (same functionality as the previous one)
-        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked) // If the checkbox is checked, show the password in plain text
-            {
-                password0.PasswordChar = '\0'; // Remove the password masking character
-            }
-            else // If the checkbox is unchecked, mask the password with '*'
-            {
-                password0.PasswordChar = '*'; // Set the password character to '*'
-            }
-        }
-
-        // Event handler for the registration button click
-        
-            private void Register_Click_1(object sender, EventArgs e)
-            {
-                // Kullanıcı adı daha önce kaydedilmiş mi kontrol et
-                string savedUserName = Properties.Settings.Default.username;
-
-                // Kullanıcı adı daha önce kaydedilmişse, kayıt yapılmasın
-                if (savedUserName != null && savedUserName == userName0.Text)
-                {
-                    MessageBox.Show("You are already registered with this username.", "Already Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return; // Bu durumda fonksiyondan çık ve işlemi durdur
-                }
-
-                // Kayıt işleminden önce, herhangi bir alan boş mu kontrol et
-                if (name0.Text == "" || surname0.Text == "" || userName0.Text == "" || password0.Text == "")
-                {
-                    MessageBox.Show("\r\nLütfen Boş Değer Bırakmayın.", "Incorrect Operation", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    // Kullanıcı bilgilerini kaydet
-                    Properties.Settings.Default.name = name0.Text;
-                    Properties.Settings.Default.surname = surname0.Text;
-                    Properties.Settings.Default.username = userName0.Text;
-                    Properties.Settings.Default.password = password0.Text;
-                    Properties.Settings.Default.email = eMail.Text; // E-posta bilgisi de kaydediliyor
-                    Properties.Settings.Default.Save(); // Ayarları kaydet
-
-                    // Başarı mesajı
-                    MessageBox.Show("Kayıt Başarılı!", "Başarılı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-
     }
-    }
+}
+
+
+
+
+
