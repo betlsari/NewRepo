@@ -125,5 +125,10 @@ namespace Console
             mainMenu.Show();
             this.Hide();
         }
+
+        private void Forum_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

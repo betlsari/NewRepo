@@ -180,6 +180,7 @@
             this.Controls.Add(this.label11);
             this.Name = "AudiA4";
             this.Text = "AudiA4";
+            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

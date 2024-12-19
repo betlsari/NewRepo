@@ -18,7 +18,17 @@ namespace Console
             InitializeComponent();
             password0.PasswordChar = '*'; // Mask the password field with '*' for security
         }
-
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked) // If the checkbox is checked, display the password as plain text
+            {
+                password0.PasswordChar = '\0'; // Remove the password masking character
+            }
+            else // If the checkbox is unchecked, mask the password with '*'
+            {
+                password0.PasswordChar = '*'; // Restore the password masking character
+            }
+        }
         private void RegisterPage_Load(object sender, EventArgs e)
         {
             // Event handler for the form's Load event (currently empty)
@@ -35,14 +45,14 @@ namespace Console
             // If the username already exists, do not allow registration
             if (savedUserName != null && savedUserName == userName0.Text)
             {
-                MessageBox.Show("You are already registered with this username.", "Already Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bu kullanıcı zaten kayıtlı.", "Zaten Kayıtlı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return; // Exit the function and stop further execution
             }
 
             // Before proceeding with registration, check if any fields are empty
             if (name0.Text == "" || surname0.Text == "" || userName0.Text == "" || password0.Text == "")
             {
-                MessageBox.Show("\r\nPlease do not leave any fields empty.", "Incorrect Operation", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("\r\nLütfen boş alan bırakmayın.", "Incorrect Operation", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -55,20 +65,15 @@ namespace Console
                 Properties.Settings.Default.Save(); // Save the settings
 
                 // Display success message
-                MessageBox.Show("Registration Successful!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Kayıt Başarılı!", "Başarılı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        
+
+        private void RegisterPage_Load_1(object sender, EventArgs e)
         {
-            if (checkBox1.Checked) // If the checkbox is checked, display the password as plain text
-            {
-                password0.PasswordChar = '\0'; // Remove the password masking character
-            }
-            else // If the checkbox is unchecked, mask the password with '*'
-            {
-                password0.PasswordChar = '*'; // Restore the password masking character
-            }
+
         }
     }
 }
