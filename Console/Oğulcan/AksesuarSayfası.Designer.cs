@@ -46,17 +46,25 @@ namespace Console.Oğulcan
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 32);
+            this.label1.Location = new System.Drawing.Point(162, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(725, 38);
             this.label1.TabIndex = 0;
@@ -65,7 +73,7 @@ namespace Console.Oğulcan
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(40, 98);
+            this.button1.Location = new System.Drawing.Point(40, 64);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(233, 105);
@@ -77,7 +85,7 @@ namespace Console.Oğulcan
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(621, 98);
+            this.button2.Location = new System.Drawing.Point(380, 64);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(249, 105);
@@ -90,7 +98,7 @@ namespace Console.Oğulcan
             // 
             this.lblAksesuar.AutoSize = true;
             this.lblAksesuar.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAksesuar.Location = new System.Drawing.Point(463, 226);
+            this.lblAksesuar.Location = new System.Drawing.Point(312, 184);
             this.lblAksesuar.Name = "lblAksesuar";
             this.lblAksesuar.Size = new System.Drawing.Size(133, 24);
             this.lblAksesuar.TabIndex = 3;
@@ -99,7 +107,7 @@ namespace Console.Oğulcan
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(621, 230);
+            this.textBox1.Location = new System.Drawing.Point(470, 188);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(159, 22);
@@ -110,7 +118,7 @@ namespace Console.Oğulcan
             // 
             this.lblAksesuarFiyat.AutoSize = true;
             this.lblAksesuarFiyat.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAksesuarFiyat.Location = new System.Drawing.Point(535, 287);
+            this.lblAksesuarFiyat.Location = new System.Drawing.Point(384, 224);
             this.lblAksesuarFiyat.Name = "lblAksesuarFiyat";
             this.lblAksesuarFiyat.Size = new System.Drawing.Size(61, 24);
             this.lblAksesuarFiyat.TabIndex = 5;
@@ -119,7 +127,7 @@ namespace Console.Oğulcan
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(621, 290);
+            this.textBox2.Location = new System.Drawing.Point(470, 227);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(159, 22);
@@ -129,7 +137,7 @@ namespace Console.Oğulcan
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(621, 350);
+            this.button3.Location = new System.Drawing.Point(316, 250);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 34);
@@ -142,7 +150,7 @@ namespace Console.Oğulcan
             // btnGeriDön
             // 
             this.btnGeriDön.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGeriDön.Location = new System.Drawing.Point(843, 486);
+            this.btnGeriDön.Location = new System.Drawing.Point(409, 530);
             this.btnGeriDön.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGeriDön.Name = "btnGeriDön";
             this.btnGeriDön.Size = new System.Drawing.Size(244, 114);
@@ -159,7 +167,7 @@ namespace Console.Oğulcan
             this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(180, 180);
+            this.listBox1.Size = new System.Drawing.Size(233, 180);
             this.listBox1.TabIndex = 9;
             this.listBox1.Visible = false;
             // 
@@ -167,7 +175,7 @@ namespace Console.Oğulcan
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Harlow Solid Italic", 19.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 274);
+            this.label2.Location = new System.Drawing.Point(36, 240);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(250, 42);
             this.label2.TabIndex = 10;
@@ -213,12 +221,56 @@ namespace Console.Oğulcan
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(436, 304);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(193, 216);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(756, 125);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(221, 198);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(750, 346);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(395, 240);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 13;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(983, 125);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(162, 198);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 14;
+            this.pictureBox8.TabStop = false;
+            // 
             // AksesuarSayfası
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.BlueViolet;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1157, 655);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnGeriDön);
@@ -238,6 +290,10 @@ namespace Console.Oğulcan
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,5 +320,9 @@ namespace Console.Oğulcan
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }
