@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+,
 namespace Console
 {
     internal static class Program
@@ -19,7 +19,7 @@ namespace Console
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new YedekParcaSayfasi());
+            Application.Run(new MainMenü());
         }
     }
 }
