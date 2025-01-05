@@ -52,5 +52,10 @@ namespace Console
             RentalForm.Show(); // Show the RentalForm
             this.Hide(); // Hide the current RentaledCarsForm
         }
+
+        private void dgwRentals_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

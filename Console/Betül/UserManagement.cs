@@ -1,4 +1,5 @@
 ﻿using Console.Betül;
+using Console.Samet;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -96,6 +97,16 @@ namespace Console
             
         }
 
-        
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var mainMenu = new MainMenü();
+            mainMenu.Show();
+            this.Hide();
+        }
     }
 }

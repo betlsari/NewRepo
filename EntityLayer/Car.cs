@@ -15,13 +15,13 @@ namespace EntityLayer
         }
 
         // Parameterized constructor, initializes a Car object with car ID, model, price, availability status, and favorite status.
-        public Car(int carId, string model, int price, bool isAvailable, bool isFavorite)
+        public Car(int carId, string model, int price, bool isAvailable)
         {
             CarId = carId; // Assigns the car ID.
             Model = model; // Assigns the model name.
             Price = price; // Assigns the car price.
             this.isAvailable = isAvailable; // Assigns the availability status.
-            this.isFavorite = isFavorite; // Assigns the favorite status.
+           // Assigns the favorite status.
         }
 
         // The car's unique identifier (ID).
@@ -37,6 +37,6 @@ namespace EntityLayer
         public bool isAvailable { get; set; }
 
         // A boolean that indicates whether the car is marked as a favorite. Default value is false.
-        public bool isFavorite { get; set; } = false;
+     
     }
 }

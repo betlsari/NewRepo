@@ -159,9 +159,9 @@
     <Compile Include="Migrations\202412181842432_F.Designer.cs">
       <DependentUpon>202412181842432_F.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202501051548571_Fix.cs" />
-    <Compile Include="Migrations\202501051548571_Fix.Designer.cs">
-      <DependentUpon>202501051548571_Fix.cs</DependentUpon>
+    <Compile Include="Migrations\202412200937346_isFavDelete.cs" />
+    <Compile Include="Migrations\202412200937346_isFavDelete.Designer.cs">
+      <DependentUpon>202412200937346_isFavDelete.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -201,8 +201,8 @@
     <EmbeddedResource Include="Migrations\202412181842432_F.resx">
       <DependentUpon>202412181842432_F.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202501051548571_Fix.resx">
-      <DependentUpon>202501051548571_Fix.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202412200937346_isFavDelete.resx">
+      <DependentUpon>202412200937346_isFavDelete.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

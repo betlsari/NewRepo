@@ -195,7 +195,13 @@ namespace Console
 
             ListCars(txtName.Text, minPrice, maxPrice); // Call the ListCars method with updated filters
         }
+        private void txtMaxPrice_TextChanged(object sender, EventArgs e)
+        {
+            int? minPrice = string.IsNullOrEmpty(txtMinPrice.Text) ? (int?)null : Convert.ToInt32(txtMinPrice.Text);
+            int? maxPrice = string.IsNullOrEmpty(txtMaxPrice.Text) ? (int?)null : Convert.ToInt32(txtMaxPrice.Text);
 
+            ListCars(txtName.Text, minPrice, maxPrice); // Call the ListCars method with updated filters
+        }
         // This method is triggered when the "Go to Rental Form" button is clicked
         private void goToRentalFormBtn_Click(object sender, EventArgs e)
         {
@@ -213,13 +219,7 @@ namespace Console
         }
 
         // This method is triggered when the maximum price textbox value changes
-        private void txtMaxPrice_TextChanged(object sender, EventArgs e)
-        {
-            int? minPrice = string.IsNullOrEmpty(txtMinPrice.Text) ? (int?)null : Convert.ToInt32(txtMinPrice.Text);
-            int? maxPrice = string.IsNullOrEmpty(txtMaxPrice.Text) ? (int?)null : Convert.ToInt32(txtMaxPrice.Text);
-
-            ListCars(txtName.Text, minPrice, maxPrice); // Call the ListCars method with updated filters
-        }
+     
 
         // This method is triggered when the "Register" button is clicked
         private void button1_Click(object sender, EventArgs e)
