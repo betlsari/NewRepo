@@ -71,7 +71,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(578, 109);
             this.button2.TabIndex = 1;
-            this.button2.Text = "ARABAMIN NESİ VAR-FORUM";
+            this.button2.Text = "FORUM";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

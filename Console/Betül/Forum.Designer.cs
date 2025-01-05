@@ -151,6 +151,7 @@
             this.Controls.Add(this.btnAddPosts);
             this.Name = "Forum";
             this.Text = "Forum";
+            this.Load += new System.EventHandler(this.Forum_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

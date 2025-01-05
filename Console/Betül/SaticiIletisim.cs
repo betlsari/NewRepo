@@ -24,5 +24,7 @@ namespace Console.Betül
             string mesaj = txtMesaj.Text;
             MessageBox.Show($"Mesaj Gönderildi: {mesaj}", "Bilgi");
         }
+
+       
     }
 }
