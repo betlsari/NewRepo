@@ -63,25 +63,25 @@ namespace Console.Betül
             // Check if email field is empty
             if (email == "")
             {
-                MessageBox.Show("E-mail field cannot be left blank", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("E-mail alanı boş olamaz.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             // Check if username field is empty
             if (username == "")
             {
-                MessageBox.Show("Username field cannot be left blank!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Kullanıcı Adı alanı boş olamaz!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             // Check if password or confirm password fields are empty
             if (newPassword == "" || confirmPassword == "")
             {
-                MessageBox.Show("Password field cannot be left blank!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Şifre alanı boş olamaz", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             // Check if the new password is the same as the old password
             if (oldPassword == newPassword)
             {
-                MessageBox.Show("\r\nNew password and old password must be different!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("\r\nEski şifre ve yeni şifre farklı olmalı!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -90,27 +90,27 @@ namespace Console.Betül
             // Verify if the entered email and username match the saved ones
             if (savedEmail != email || savedUsername != username)
             {
-                MessageBox.Show("Username or email address is incorrect. Please check again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Kullanıcı adı veya e-posta adresi yanlış. Lütfen tekrar kontrol edin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // Check if the new password matches the confirm password
             if (newPassword != confirmPassword)
             {
-                MessageBox.Show("Passwords do not match. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Şifreler uyuşmuyor. Lütfen tekrar deneyin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // Check if the new password is different from the old password (redundant, but ensures clear logic)
             if (oldPassword == newPassword)
             {
-                MessageBox.Show("The old password and the new password cannot be the same. Please enter a different password.",
+                MessageBox.Show("\r\nEski şifre ve yeni şifre aynı olamaz. Lütfen farklı bir şifre girin.",
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 // If the password reset is successful, display a success message
-                MessageBox.Show("Your password has been successfully reset.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("\r\nŞifreniz başarıyla sıfırlandı.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Save the new password to application settings
                 Properties.Settings.Default.password = newPassword;

@@ -23,5 +23,7 @@ namespace Console.Betül
             si.ShowDialog();
             this.Hide();
         }
+
+        
     }
 }

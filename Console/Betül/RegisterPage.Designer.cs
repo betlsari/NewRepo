@@ -182,6 +182,7 @@
             this.Controls.Add(this.Register);
             this.Name = "RegisterPage";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.RegisterPage_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
