@@ -46,6 +46,7 @@
             this.dgwRentals.RowTemplate.Height = 24;
             this.dgwRentals.Size = new System.Drawing.Size(729, 317);
             this.dgwRentals.TabIndex = 0;
+            this.dgwRentals.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwRentals_CellContentClick);
             // 
             // label1
             // 
