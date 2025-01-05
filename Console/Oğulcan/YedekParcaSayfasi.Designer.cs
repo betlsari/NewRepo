@@ -51,7 +51,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.lblMarka = new System.Windows.Forms.Label();
             this.lblModel = new System.Windows.Forms.Label();
             this.lblYil = new System.Windows.Forms.Label();
@@ -289,17 +288,6 @@
             this.label9.Text = "İkinci El İlanlar";
             this.label9.Visible = false;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(639, 357);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 42);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "İlan Göster";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // lblMarka
             // 
             this.lblMarka.AutoSize = true;
@@ -460,7 +448,6 @@
             this.Controls.Add(this.lblYil);
             this.Controls.Add(this.lblModel);
             this.Controls.Add(this.lblMarka);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.comboBox1);
@@ -516,7 +503,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblMarka;
         private System.Windows.Forms.Label lblModel;
         private System.Windows.Forms.Label lblYil;

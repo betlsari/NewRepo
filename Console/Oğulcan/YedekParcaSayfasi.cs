@@ -121,12 +121,6 @@ namespace Console.Oğulcan
             }
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //that code opens an another information part when we click a index included in listbox
